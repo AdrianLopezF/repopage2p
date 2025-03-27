@@ -1,0 +1,216 @@
+/* Hero.css */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* La altura ocupa el 100% de la pantalla */
+  }
+  
+  .hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Animaciones para los videos */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Clase para el video cuando está saliendo */
+  .hero-video.fade-out {
+    animation: fadeOut 1s forwards;
+  }
+  
+  /* Clase para el video cuando está entrando */
+  .hero-video.fade-in {
+    animation: fadeIn 3s forwards;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Ajustamos el texto a la izquierda con un margen de 10% */
+    transform: translateY(-50%); /* Centrado vertical */
+    color: #00ff00; /* Color verde ciberespacial */
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif; /* Fuente tecnológica */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6); /* Efecto neón */
+    z-index: 10;
+    max-width: 50%; /* Limitar el ancho del texto */
+    letter-spacing: 1px; /* Espaciado entre letras para hacerlo más futurista */
+    text-transform: uppercase; /* Hacer que los textos estén en mayúsculas */
+    line-height: 1.5; /* Separación entre líneas */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente para que se lea bien */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  /* Animación de caída suave */
+  @keyframes fallIn {
+    0% {
+      transform: translateY(-50px); /* Comienza fuera de la pantalla (arriba) */
+      opacity: 0; /* Comienza invisible */
+    }
+    100% {
+      transform: translateY(0); /* Llega a su posición final */
+      opacity: 1; /* Se vuelve completamente visible */
+    }
+  }
+  
+  /* Solo para el texto1 */
+  .text1 {
+    margin-bottom: 15px; /* Separar el primer texto del segundo */
+    font-size: 2.5rem; /* Tamaño más grande para el primer texto */
+    color: #10b464; /* Verde brillante */
+    font-weight: 900; /* Aumentamos el peso de la fuente para que sea más grueso */
+    text-shadow: 0 0 5px rgba(0, 255, 0, 1),
+      /* Sombra verde brillante */ 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra negra para dar profundidad */
+    animation: fallIn 1s ease-out; /* Aplicamos la animación fallIn con una duración de 1 segundo */
+  }
+  
+  /* Para el texto2 */
+  .text2 {
+    font-size: 1.5rem;
+    color: #ffffff; /* Blanco */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 20px rgba(255, 255, 255, 0.6); /* Sombra blanca */
+    animation: fallIn 1s ease-out; /* Aplicamos la animación fallIn con una duración de 1 segundo */
+  }
+  
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  .arrow-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .thumbnail-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    overflow-x: hidden; /* Asegura que solo se vean las miniaturas visibles */
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+  }
+  
+  .thumbnail.active {
+    border: 2px solid #00ff00; /* Resaltar la miniatura activa con el mismo color de neón */
+  }
+  
+  .thumbnail:hover {
+    border: 2px solid rgba(0, 255, 255, 0.8);
+  }
+  
+  /* Responsividad para diferentes tamaños de pantalla */
+  
+  /* Pantallas grandes, como escritorios */
+  @media (min-width: 1200px) {
+    .hero-container {
+      height: 100vh; /* En pantallas grandes, la altura ocupa el 100% de la pantalla */
+    }
+  
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .hero-text {
+      font-size: 3rem; /* Aumentamos el tamaño de los textos para pantallas grandes */
+    }
+  }
+  
+  /* Para pantallas medianas, como tabletas y laptops */
+  @media (max-width: 1199px) and (min-width: 768px) {
+    .hero-container {
+      height: 100vh; /* En tabletas y laptops, también se ocupa toda la altura de la pantalla */
+    }
+  
+    .thumbnail {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .arrow-button {
+      font-size: 1.5rem;
+    }
+  
+    .hero-text {
+      font-size: 2rem;
+      max-width: 70%; /* Aumentamos el ancho permitido del texto */
+    }
+  }
+  
+  /* Para pantallas pequeñas, como teléfonos móviles */
+  @media (max-width: 767px) {
+    .hero-container {
+      height: 100vh; /* En dispositivos móviles, también ocupa toda la altura */
+    }
+  
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .arrow-button {
+      font-size: 1.2rem;
+      padding: 8px;
+    }
+  
+    .hero-text {
+      font-size: 1.5rem;
+      max-width: 80%; /* Hacemos que el texto ocupe más espacio en pantallas pequeñas */
+    }
+  }
+  

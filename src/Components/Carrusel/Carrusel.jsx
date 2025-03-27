@@ -2,9 +2,9 @@ import React from 'react'
 
 const Carrusel = () => {
   return (
-    <div>
+    <section className="carrusel">
       
-    </div>
+    </section>
   )
 }
 
