@@ -158,67 +158,6 @@
   border: 2px solid rgba(0, 255, 255, 0.8);
 }
 
-/* Responsividad para diferentes tamaños de pantalla */
-
-/* Pantallas grandes, como escritorios */
-@media (min-width: 1200px) {
-  .hero-container {
-    height: 100vh; /* En pantallas grandes, la altura ocupa el 100% de la pantalla */
-  }
-
-  .thumbnail {
-    width: 100px;
-    height: 100px;
-  }
-
-  .hero-text {
-    font-size: 3rem; /* Aumentamos el tamaño de los textos para pantallas grandes */
-  }
-}
-
-/* Para pantallas medianas, como tabletas y laptops */
-@media (max-width: 1199px) and (min-width: 768px) {
-  .hero-container {
-    height: 100vh; /* En tabletas y laptops, también se ocupa toda la altura de la pantalla */
-  }
-
-  .thumbnail {
-    width: 70px;
-    height: 70px;
-  }
-
-  .arrow-button {
-    font-size: 1.5rem;
-  }
-
-  .hero-text {
-    font-size: 2rem;
-    max-width: 70%; /* Aumentamos el ancho permitido del texto */
-  }
-}
-
-/* Para pantallas pequeñas, como teléfonos móviles */
-@media (max-width: 767px) {
-  .hero-container {
-    height: 100vh; /* En dispositivos móviles, también ocupa toda la altura */
-  }
-
-  .thumbnail {
-    width: 50px;
-    height: 50px;
-  }
-
-  .arrow-button {
-    font-size: 1.2rem;
-    padding: 8px;
-  }
-
-  .hero-text {
-    font-size: 1.5rem;
-    max-width: 80%; /* Hacemos que el texto ocupe más espacio en pantallas pequeñas */
-  }
-}
-
 .play-pause-button {
   background-color: #1a1a1a; /* Color oscuro que da sensación de seriedad */
   color: #00e5ff; /* Un color azul brillante que transmite tecnología y confianza */
@@ -250,4 +189,98 @@
 
 .play-pause-button:hover i {
   transform: rotate(45deg); /* Rotar ligeramente el icono al pasar el mouse */
+}
+
+.forti-image {
+  position: absolute;
+  top: 30%; /* Centrado vertical */
+  right: 2%; /* Ubicado a la derecha */
+  transform: translateY(
+    -50%
+  ); /* Ajusta la imagen para que esté perfectamente centrada en el eje vertical */
+  width: 10%; /* Tamaño de la imagen (ajustable) */
+  height: auto; /* Mantener la relación de aspecto */
+  z-index: 20; /* Asegurarse de que esté sobre el video y el texto */
+  background-color: white;
+  border-radius: 5% 50% 5% 50%;
+  transition: transform 0.3s ease-in-out; /* Transición suave para el salto */
+}
+
+/* Animación de salto cuando el mouse pasa por encima */
+.forti-image:hover {
+  transform: translateY(-50%) translateY(-10px); /* Movimiento hacia arriba para simular el salto */
+}
+
+/* Responsividad para diferentes tamaños de pantalla */
+
+/* Pantallas grandes, como escritorios */
+@media (min-width: 1200px) {
+  .hero-container {
+    height: 100vh; /* En pantallas grandes, la altura ocupa el 100% de la pantalla */
+  }
+
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-text {
+    font-size: 3rem; /* Aumentamos el tamaño de los textos para pantallas grandes */
+  }
+
+  .forti-image {
+    width: 12%;
+  }
+}
+
+/* Para pantallas medianas, como tabletas y laptops */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .hero-container {
+    height: 100vh; /* En tabletas y laptops, también se ocupa toda la altura de la pantalla */
+  }
+
+  .thumbnail {
+    width: 70px;
+    height: 70px;
+  }
+
+  .arrow-button {
+    font-size: 1.5rem;
+  }
+
+  .hero-text {
+    font-size: 2rem;
+    max-width: 70%; /* Aumentamos el ancho permitido del texto */
+  }
+
+  .forti-image {
+    width: 15%;
+  }
+}
+
+/* Para pantallas pequeñas, como teléfonos móviles */
+@media (max-width: 767px) {
+  .hero-container {
+    height: 100vh; /* En dispositivos móviles, también ocupa toda la altura */
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .arrow-button {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+    max-width: 80%; /* Hacemos que el texto ocupe más espacio en pantallas pequeñas */
+  }
+
+  .forti-image {
+    top: 18%;
+    width: 18%;
+  }
 }

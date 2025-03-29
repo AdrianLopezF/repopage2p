@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  server: {
+    host: '0.0.0.0',  // Esto permite que otras máquinas (como tu teléfono) se conecten
+    port: 5173,        // El puerto sigue siendo el 5173 (o el que prefieras)
+  },
+});

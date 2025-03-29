@@ -185,6 +185,13 @@ const Hero = () => {
         </button>
       </div>
 
+      {/* Imagen en la parte media a la derecha */}
+      <img
+        src="/forti.png" // Ruta de la imagen en la carpeta public
+        alt="Forti Image"
+        className="forti-image"
+      />
+
       <div className="thumbnail-container">
         {/* Botón de Play/Pause */}
         <button className="play-pause-button" onClick={togglePlayPause}>
