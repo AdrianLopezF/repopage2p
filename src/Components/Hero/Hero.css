@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  flex-direction: column; /* Los elementos se apilan verticalmente */
+  flex-direction: column; 
 }
 
 .hero-video {
@@ -36,7 +36,7 @@
   font-size: 45px;
   font-weight: bold;
   position: relative;  
-  margin-top: 10px;
+  margin-top: 100px;
   margin-bottom: -30px;
 }
 
@@ -60,7 +60,7 @@
 .text4 {
   font-size: 20px;
   text-align: center;
-  margin: 0 20% 5% 20%;
+  margin: 0 22% 5% 22%;
 }
 
 .fortinet-button {
