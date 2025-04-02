@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css'
-import logo from '../../../public/Image/logo.png';
-import contactIcon from '../../../public/Image/flecha-correcta.png';
+import logo from '../../../public/Image/Logo.png';
 
 const Header = () => {
   return (
@@ -15,11 +14,9 @@ const Header = () => {
         </ul>
         <button className="contact-button">
           Contáctanos
-          <img src={contactIcon} alt="Ícono de contacto" className="contact-icon" />
         </button>
       </div>
     </div>
   )
 }
-
 export default Header

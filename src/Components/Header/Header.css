@@ -1,79 +1,107 @@
 /* ----- Estilos de la barra de navegación ----- */
 .navbar {
-    position: fixed; /* Mantiene la barra fija en la parte superior */
-    background-color: rgba(0, 0, 0, 0.1); /* Fondo negro con opacidad */
-    display: flex; /* Usa flexbox para organizar los elementos */
-    justify-content: space-between; /* Separa el logo a la izquierda y el contenido a la derecha */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 4px 20px 4px 10px; /* Espaciado interno */
-    left: 0;
-    right: 0;
-    border-radius: 50px; /* Bordes redondeados para un diseño moderno */
-    box-shadow: 0 5px 10px  rgba(78, 59, 246, 0.3); /* Sombra sutil */
-    margin: 0 120px; /* Margen a los lados para centrar la barra */
-    z-index: 1000;
-  }
-  
-  /* ----- Estilos del logo de la barra de navegación ----- */
-  .navbar-logo {
-    height: 65px; /* Define la altura del logo */
-    width: auto; /* Mantiene la proporción */
-    border-radius: 100px; /* Hace el logo más redondeado */
-    box-shadow: 0px 4px 10px rgba(78, 59, 246, 0.3); /* Sombra efecto sobre salir*/
-    border: 2px solid white;
-  }
-  
-  /* ----- Contenedor de los elementos de la derecha ----- */
-  .navbar-right {
-    display: flex; /* Organiza los elementos en línea */
-    align-items: center; /* Centra los elementos verticalmente */
-    gap: 60px; /* Espaciado entre los elementos */
-  }
-  
-  /* ----- Estilos de la lista de navegación ----- */
-  .navbar ul {
-    display: flex; /* Organiza los elementos en fila */
-    gap: 70px; /* Espaciado entre los elementos de la lista */
-    font-size: 17px; /* Tamaño del texto */
-    list-style-type: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el relleno predeterminado */
-    margin: 0; /* Elimina el margen predeterminado */
-  }
-  
-  /* ----- Estilos de los enlaces de navegación ----- */
-  .navbar ul a {
-    color: rgb(0, 0, 0); /* Color del texto */
-    text-decoration: none; /* Elimina el subrayado */
-  }
-  
-  .navbar ul a:hover {
-    color: #f3f4f6; /* Cambio de color al pasar el mouse */
-  }
-  
-  /* ----- Botón de contacto ----- */
-  /* Estilos del botón */
-  .contact-button {
-    display: flex; /* Para alinear la imagen y el texto */
-    align-items: center; /* Centra los elementos verticalmente */
-    gap: 10px; /* Espacio entre la imagen y el texto */
-    background: black; /* Color de fondo */
-    padding: 8px 24px; /* Espaciado interno */
-    border-radius: 16px; /* Bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(76, 58, 232, 0.3); /* Sombra */
-    color: white; /* Color del texto */
-    font-size: 17px; /* Tamaño del texto */
-    font-weight: 600; /* Grosor del texto */
-    border: 2px solid white; /* Borde blanco */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: 0.3s; /* Transición suave */
-  }
-  
-  /* Estilos de la imagen dentro del botón */
-  .contact-icon {
-    width: 15px; /* Ajusta el tamaño según sea necesario */
-    height: 15px;
-  }
-  
+  position: fixed; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 4px 20px 4px 10px; 
+  left: 0;
+  right: 0;
+  margin: 4px 50px; 
+  z-index: 1000;
+}
+
+
+
+
+/* ----- Contenedor del logo y el texto del logo ----- */
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+}
+
+/* ----- Estilos del logo de la barra de navegación ----- */
+.navbar-logo {
+  height: 90px; 
+  width: auto; 
+}
+
+
+
+
+/* ----- Contenedor de los elementos de la derecha ----- */
+.navbar-right {
+  display: flex;
+  align-items: center; 
+  gap: 60px; 
+}
+
+/* ----- Estilos de la lista de navegación ----- */
+.navbar ul {
+  display: flex; 
+  gap: 70px; 
+  font-size: 17px; 
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+/* ----- Estilos de los enlaces de navegación ----- */
+.navbar ul a {
+  color: rgb(255, 255, 255); 
+  text-decoration: none; 
+  position: relative;
+  padding-bottom: 5px; 
+}
+
+/* Línea blanca debajo del enlace activo */
+.navbar ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; 
+  background-color: white; 
+  transition: width 0.3s ease-in-out;
+}
+
+/* Cuando el enlace está activo, se muestra la línea */
+.navbar ul a.active::after {
+  width: 100%; 
+}
+
+/* Hover opcional para efecto al pasar el mouse */
+.navbar ul a:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+/* ----- Botón de contacto ----- */
+.contact-button {
+  background: linear-gradient(to right, #44F2E1, #3AC0FE); 
+  color: black; 
+  font-size: 17px;
+  border: 1px solid white;
+  padding: 6px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact-button:hover {
+  background: linear-gradient(to right, #3AC0FE, #44F2E1);
+  transform: scale(1.05);
+}
+
+
   
   
     
