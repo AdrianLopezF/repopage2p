@@ -1,0 +1,159 @@
+.nosotros-container {
+  display: flex;
+  height: 100vh;
+  background-color: #000912;
+  color: white;
+  position: relative; /* ¡IMPORTANTE! Para que el ellipse se posicione dentro de este contenedor */
+  overflow: hidden;    /* Para que no se desborde si sale del área */
+}
+
+.nosotros-img {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  z-index: 2;
+}
+
+.nosotros-txtbtn {
+  flex: 2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.nosotros-txtbtn h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.nosotros-txtbtn p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.accordion {
+  position: relative;
+  padding: 8px 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 15px;
+  background: linear-gradient(#0f2027, #203a43) padding-box, /* Fondo sólido */
+              linear-gradient(90deg, #0CFAF5, #02c7a6d8) border-box; /* Degradado del borde */
+  border: 3px solid transparent;
+  color: #04e1ddd8;
+  transition: background 0.3s ease;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.accordion:hover {
+  background-color: rgba(0, 240, 255, 0.1);
+}
+
+.accordion span::after {
+  content: '▼';
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.accordion .mostrar + span::after {
+  transform: rotate(180deg);
+}
+
+.contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  color: white;
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.mostrar {
+  max-height: 200px;
+}
+.logo-img{
+  position: absolute;
+  bottom: 2%; 
+  right: 1%;
+  width: auto;
+  height: 15%; 
+  z-index: 0; 
+}
+
+.ellipse-estatica {
+  position: absolute;
+  bottom: -40%; 
+  right: -20%; 
+  width: auto;
+  height: 80%;
+  z-index: 0; 
+}
+
+.ellipse-movimiento {
+  position: absolute;
+  top: 20%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  animation: moveDiagonal 10s ease-in-out infinite; 
+  width: auto;
+  height: 90%; 
+  opacity: .8;
+  z-index: 0; 
+}
+
+
+@keyframes moveDiagonal {
+  0% {
+    transform: translateX(-50%) translateY(-150px); /* Punto A */
+  }
+  50% {
+    transform: translateX(-80%) translateY(100px);  /* Punto B */
+  }
+  100% {
+    transform: translateX(-50%) translateY(-150px); /* Vuelta a A */
+  }
+}
+
+.ellipse-movimiento2 {
+  position: absolute;
+  left: 85%; 
+  transform: translateX(-50%);
+  animation: moveDiagonal2 10s ease-in-out infinite; 
+  width: auto;
+  height: 60%; 
+  opacity: .8;
+  z-index: 0; 
+}
+
+
+
+@keyframes moveDiagonal2 {
+  0% {
+    transform: translateX(5%) translateY(100px); /* Punto A (derecha abajo) */
+  }
+  33% {
+    transform: translateX(-60%) translateY(-100px);  /* Punto B (izquierda abajo) */
+  }
+  100% {
+    transform: translateX(5%) translateY(100px); /* Vuelta a A */
+  }
+}
+
+
+
+
+
+
+
+  

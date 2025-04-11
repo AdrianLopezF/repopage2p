@@ -1,0 +1,148 @@
+/* --- CONTENEDOR GENERAL --- */
+.servicios-container {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    background-color: #000912;
+    position: relative; /* ¡IMPORTANTE! Para que el ellipse se posicione dentro de este contenedor */
+    overflow: hidden;    /* Para que no se desborde si sale del área */
+  }
+  
+  /* --- CONTENIDO PRINCIPAL --- */
+  .content-servicios {
+    margin: 5%;
+    width: 100%;
+  }
+  
+  /* --- TÍTULO --- */
+  .content-servicios h2 {
+    text-align: center;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
+  
+  .content-servicios h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(90deg, #3AC0FE, #44F2E1, #02a685dc);
+  }
+
+  .content-servicios p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    z-index: 100;
+  }
+  
+  /* --- CONTENEDOR DE CUADROS --- */
+  .cuadros-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  /* --- ESTILO DE CADA CUADRO --- */
+  .cuadro {
+    background-color: #000912;
+    color: rgb(255, 255, 255);
+    width: 250px;
+    height: 250px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 71, 102, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .cuadro:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* --- ICONO EN EL CUADRO --- */
+  .icono {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  /* --- TEXTO DEL CUADRO --- */
+  .cuadro p {
+    font-size: 18px;
+    margin: 20px 0px 30px 0px;
+  }
+  
+  /* --- BOTÓN DEL CUADRO --- */
+  .cuadro button {
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cuadro button:hover {
+    background-color: #000912;
+    color:white;
+  }
+
+  .btn1{
+    background-color: #3AC0FE;
+  }
+  .btn2{
+    background-color: #44F2E1;
+  }
+  .btn3{
+    background-color: #029A7B;
+  }
+
+  .cuadro1{
+    background: 
+    linear-gradient(#0f2027, #203a43) padding-box, 
+    linear-gradient(90deg, #3AC0FE, #44F2E1) border-box;
+    border: 3px solid transparent;
+    margin-top:30px ;
+  }
+  .cuadro2{
+    background: 
+    linear-gradient(#0f2027, #203a43) padding-box, 
+    linear-gradient(90deg, #44F2E1, #029A7B) border-box;
+    border: 3px solid transparent;
+  }
+  .cuadro3{
+    background: 
+    linear-gradient(#0f2027, #203a43) padding-box, 
+    linear-gradient(90deg, #029A7B, #036766) border-box;
+    border: 3px solid transparent;
+    margin-top:30px ;
+  }
+  .ellipse {
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    right: -35%; 
+    width: auto;
+    height: 100%;
+    z-index: 0; 
+  }
+  .ellipse2 {
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    left: -35%; 
+    width: auto;
+    height: 100%;
+    z-index: 0; 
+  }
+  
+  
+  

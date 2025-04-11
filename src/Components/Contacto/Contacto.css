@@ -1,0 +1,122 @@
+.contacto-container{
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./image/Fondo-correo.png'); /*Fondo*/
+    background-size: cover;       /* La imagen cubre todo el fondo */
+    background-position: center;  /* Centrar la imagen */
+    padding: 2%;  
+    position: relative; /* ¡IMPORTANTE! Para que el ellipse se posicione dentro de este contenedor */
+    overflow: hidden;    /* Para que no se desborde si sale del área */
+    gap: 200px;
+}
+
+/*LADO IZQUIERDO*/
+.contenedor-correo{
+    backdrop-filter: blur(5px); /*Difuminar el fondo que hay detrás*/
+    background-color: rgba(132, 186, 192, 0.247);
+    border-radius: 20px;
+    width:  550px;
+    max-width: 90vw;  
+    padding: 2%;
+    color: white;
+    box-shadow: 0 8px 24px rgba(98, 101, 102, 0.244);
+}
+
+.contenedor-correo h2{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content-inputs{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.content-inputs input, textarea{
+  flex: 1;                           
+  padding: 12px;                     
+  border: 2px solid white;                      
+  border-radius: 30px;               
+  background: rgba(255, 255, 255, 0.629); 
+  color: rgb(0, 0, 0);                            
+  font-size: 15px; 
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+textarea {
+    resize: none;                      /* Desactiva el redimensionamiento manual */
+}
+
+button{
+    font-size: 16px;
+    width: 150px;
+    background: linear-gradient(90deg, #0CFAF6, #0f9195dd);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;                   /* Cambia el cursor al pasar encima */
+    transition: background 0.3s ease;  /* Transición suave al hacer hover */
+    align-self: center;
+}
+button:hover {
+    background: #0ceefae7;
+}
+
+/*LADO DERECHO*/
+.contacto-lado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    max-width: 500px;
+    text-align: center;
+    gap: 8px;  
+}
+
+.imagen-logo{
+    width: 200px;
+}
+
+.redes{
+    display: flex;
+    gap: 15px;              
+}
+
+.redes img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;                   /* Cambia el cursor al pasar encima */
+    transition: transform 0.3s ease;   /* Efecto al pasar el cursor */
+}
+
+.redes img:hover {
+    transform: scale(1.1);             /* Agranda un poco el icono */
+  }
+
+  @media (max-width: 768px) {
+    .contacto-fondo {
+      flex-direction: column;          /* Coloca todo en una sola columna */
+      align-items: center;
+    }
+  
+    .input-group {
+      flex-direction: column;          /* Inputs uno debajo del otro */
+    }
+  
+    .contacto-lado {
+      margin-top: 20px;                /* Espacio extra entre tarjeta y redes */
+    }
+  }
+  
