@@ -9,7 +9,10 @@ const Hero = () => {
         <img src="/image/Mundo2.png" className="hero-mundo" alt="Mundo" />
         <h1 className="text1">REDES SEGURAS Y PROTEGIDAS</h1>
         <h2 className="text2">CON</h2>
-        <h2 className="text3">2PROTECTION</h2>
+        <span className="text-container">
+          <span className="text3">2PROTECTION</span>
+        </span>
+
         <p className="text4">
           Nuestro objetivo es ser facilitadores del proceso de desarrollo tecnológico de su empresa, aportando continuidad operacional, ahorro de costos, estabilidad organizacional, productividad y visibilidad de la seguridad TI.
         </p>
