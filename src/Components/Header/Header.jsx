@@ -1,22 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './Header.css'
 import logo from '../../../public/Image/Logo.png';
 
+
 const Header = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+};
+
   return (
     <div className="navbar">
-      <img src={logo} alt="Logo" className="navbar-logo" />
-      <div className="navbar-right">
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Servicios</a></li>
-        </ul>
-        <button className="contact-button">
-          Contáctanos
-        </button>
-      </div>
-    </div>
+  <div className="navbar-logo-container">
+    <img src={logo} alt="Logo" className="navbar-logo" />
+    <button className="hamburger" onClick={toggleMenu}>
+      ☰
+    </button>
+  </div>
+    
+
+
+  <div className={`navbar-right ${menuOpen ? "open" : ""}`}>
+    <ul>
+      <li><a href="#inicio" className="active">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button className="contact-button">Contáctanos</button>
+  </div>
+</div>
+
   )
 }
 export default Header
