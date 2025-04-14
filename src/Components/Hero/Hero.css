@@ -1,16 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
 .hero-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  flex-direction: column; 
+  flex-direction: column;
+  padding: 2rem 1rem;
 }
 
 .hero-video {
   position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -18,11 +24,15 @@
 }
 
 .hero-mundo {
-  width: 1100px;
+  width: 90vw;
+  max-width: 1100px;
+  height: auto;
   opacity: 0.6;
   z-index: -1;
   position: absolute;
-  transform: translate(-50%, -25%);
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
 }
 
 .hero-text {
@@ -30,26 +40,27 @@
   color: white;
   position: relative;
   z-index: 1;
+  max-width: 1200px;
+  padding: 0 5vw;
+  word-wrap: break-word;
 }
 
 .text1 {
-  font-size: 45px;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: bold;
-  position: relative;  
   margin-top: 100px;
   margin-bottom: -30px;
 }
 
 .text2 {
-  font-size: 35px;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
   font-weight: bold;
-  position: relative;  
-  display: inline-block; 
+  display: inline-block;
   margin-right: 8px;
 }
 
 .text3 {
-  font-size: 40px;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
   font-weight: bold;
   background: linear-gradient(to right, #03E7BA, #0cdefa);
   -webkit-background-clip: text;
@@ -58,24 +69,41 @@
 }
 
 .text4 {
-  font-size: 20px;
-  text-align: center;
-  margin: 0 22% 5% 22%;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  margin: 0 auto 5%;
+  max-width: 800px;
 }
 
 .fortinet-button {
-  position: absolute; 
-  bottom: 80px;
-  right: 60px; 
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
   border-radius: 10px 10px 10px 0px;
   border: 3px solid #03e3e7;
   background: transparent;
   cursor: pointer;
-  padding: 8px 15px;
+  padding: 8px 12px;
+  width: clamp(140px, 15vw, 200px);
 }
 
 .button-fortinet {
-  width: 150px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .fortinet-button {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .hero-mundo {
+    top: 35%;
+  }
+
+  .hero-text {
+    padding: 0 1rem;
+  }
 }
 
 
