@@ -1,38 +1,54 @@
-* {
-  box-sizing: border-box;
+/* Animación de entrada para los textos */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+@keyframes fadeInDelay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero container styles */
 .hero-container {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   flex-direction: column;
-  padding: 2rem 1rem;
+  animation: fadeInDelay 1s ease-out;
 }
 
 .hero-video {
   position: absolute;
-  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  opacity: 0.7; /* Slightly dimmed video for better text visibility */
+  animation: fadeInUp .5s ease-out; /* Animation for video fade-in */
 }
 
 .hero-mundo {
-  width: 90vw;
-  max-width: 1100px;
-  height: auto;
+  width: 1100px;
   opacity: 0.6;
   z-index: -1;
   position: absolute;
-  left: 50%;
-  top: 25%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -25%);
+  animation: fadeInUp .00005s ease-out;
 }
 
 .hero-text {
@@ -40,74 +56,160 @@
   color: white;
   position: relative;
   z-index: 1;
-  max-width: 1200px;
-  padding: 0 5vw;
-  word-wrap: break-word;
+}
+
+/* Animations for text */
+.hero-text.animate-text .text1 {
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-text.animate-text .text2 {
+  animation: fadeInUp 2s ease-out;
+}
+
+.hero-text.animate-text .text3 {
+  animation: fadeInUp 2.5s ease-out;
+}
+
+.hero-text.animate-text .text4 {
+  animation: fadeInUp 3s ease-out;
 }
 
 .text1 {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: 45px;
   font-weight: bold;
+  position: relative;
   margin-top: 100px;
   margin-bottom: -30px;
 }
 
 .text2 {
-  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-size: 35px;
   font-weight: bold;
+  position: relative;
   display: inline-block;
   margin-right: 8px;
 }
 
 .text3 {
-  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  position: relative;
+  font-size: 40px;
   font-weight: bold;
   background: linear-gradient(to right, #03E7BA, #0cdefa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  overflow: hidden;
+  line-height: 1;          /* 🔧 Asegura alineación vertical */
+  top: 1.5%;                /* 🔧 Baja un poco el texto */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+
+/* Brillo animado horizontal */
+.text3::after {
+  content: '2PROTECTION';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: linear-gradient(to right, #FF00FF, #00FFFF); /* Brillo más llamativo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Máscara en movimiento */
+  -webkit-mask-image: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 1) 50%,
+    transparent 70%
+  );
+  -webkit-mask-size: 200% 100%;
+  -webkit-mask-repeat: no-repeat;
+  animation: mask-shine 2.5s infinite linear;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+}
+
+@keyframes mask-shine {
+  0% {
+    -webkit-mask-position: 200% 0;
+  }
+  100% {
+    -webkit-mask-position: -300% 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .text4 {
-  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-  margin: 0 auto 5%;
-  max-width: 800px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 22% 5% 22%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* Animación para el botón */
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button styles */
 .fortinet-button {
   position: absolute;
-  bottom: 5vh;
-  right: 5vw;
+  bottom: 80px;
+  right: 60px;
   border-radius: 10px 10px 10px 0px;
-  border: 3px solid #03e3e7;
+  border: 3px solid #0be9ec;
   background: transparent;
   cursor: pointer;
-  padding: 8px 12px;
-  width: clamp(140px, 15vw, 200px);
+  padding: 8px 15px;
+  animation: fadeInUp 2.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Animación para el botón cuando la sección esté visible */
+.fortinet-button.animate-button {
+  animation: fadeInButton 2s ease-out;
+}
+
+.fortinet-button:hover {
+  transform: translateY(-10px); /* Levanta el botón 5px */
+  box-shadow: 0 4px 15px rgba(11, 233, 236, 0.8); /* Sombra para dar efecto de elevación */
+  background-color: rgba(163, 98, 67, 0); /* Fondo transparente como mencionaste */
+  border-color: #00b8bb; /* Cambia el borde para mayor contraste */
 }
 
 .button-fortinet {
   width: 100%;
-  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-  .fortinet-button {
-    bottom: 30px;
-    right: 30px;
-  }
-
-  .hero-mundo {
-    top: 35%;
-  }
-
-  .hero-text {
-    padding: 0 1rem;
-  }
+.fortinet-button:hover .button-fortinet {
+  transform: scale(1.1); /* Slightly grow the button on hover */
 }
 
+/* Smooth transition for font loading */
+* {
+  font-family: 'Roboto', sans-serif;
+}
 
-
-
-
-
+/* Optional: Smooth transition for background fade on hover */
+.hero-text:hover {
+}

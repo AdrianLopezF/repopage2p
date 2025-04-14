@@ -3,7 +3,7 @@ import "./Fortinet.css"
 
 const Fortinet = () => {
   return (
-    <div className="fortinet-container">
+    <div id='fortinet' className="fortinet-container">
             <img src="/image/Ellipse-mayor.png" className="ellipse-mov" />
             <img src="/image/Ellipse-mayor.png" className="ellipse-mov2" />
       <div className='fortinet-titulo'>

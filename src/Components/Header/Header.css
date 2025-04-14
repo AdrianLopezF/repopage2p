@@ -1,14 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#servicios {
+  scroll-margin-top: 75px; /* Ajusta según el alto de tu navbar */
+}
+
+#contacto {
+  scroll-margin-top: 105px; /* Ajusta según el alto de tu navbar */
+}
+
+
 /* ----- Estilos de la barra de navegación ----- */
 .navbar {
   position: fixed; 
   display: flex; 
   justify-content: space-between; 
   align-items: center;
-  padding: 4px 20px 4px 10px; 
+  padding: 4px 20px; 
   left: 0;
   right: 0;
   margin: 4px 50px; 
   z-index: 1000;
+  background: rgba(0, 0, 0, 0.8); /* Fondo negro con 50% de transparencia */
+  border-radius: 15px; /* Bordes redondeados */
 }
 
 
@@ -65,9 +80,55 @@
   width: 100%;
 }
 
+/* ----- Estilos para el dropdown (submenu) ----- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
+.dropdown-content {
+  display: none; /* Inicialmente oculto */
+  position: absolute;
+  top: 65%; /* Aparece justo debajo del enlace */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+  color: white;
+  width: 300px; /* Puedes ajustarlo para que sea más ancho */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  padding: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  visibility: hidden; /* Lo hacemos invisible por defecto */
+  z-index: 9999;
+}
 
+.dropdown:hover .dropdown-content {
+  display: block; /* Muestra el contenido cuando se hace hover */
+  opacity: 1; /* Transición suave */
+  visibility: visible;
+  transform: translateY(10px); /* Hace que el contenido se desplace suavemente */
+}
 
+/* ----- Estilo de los elementos dentro del dropdown ----- */
+.dropdown-content p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #555; /* Fondo cuando se hace hover en los enlaces */
+}
 
 /* ----- Botón de contacto ----- */
 .contact-button {
@@ -88,9 +149,3 @@
   background: linear-gradient(to right, #3AC0FE, #44F2E1);
   transform: scale(1.05);
 }
-
-
-  
-  
-    
-    
