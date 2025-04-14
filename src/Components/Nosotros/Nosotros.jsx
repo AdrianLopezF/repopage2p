@@ -9,7 +9,7 @@ const Nosotros = () => {
   };
 
   return (
-    <div className="nosotros-container">
+    <div id='nosotros' className="nosotros-container">
 
       <img src="/image/Ellipse-mayor.png" className="ellipse-movimiento" />
       <img src="/image/Ellipse-mayor.png" className="ellipse-movimiento2" />

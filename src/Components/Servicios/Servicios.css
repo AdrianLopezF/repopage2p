@@ -95,9 +95,36 @@
     color:white;
   }
 
-  .btn1{
-    background-color: #3AC0FE;
-  }
+/* Estilo común para button y Link */
+.btn1, .btn2, .btn3 {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;  /* Para que el texto sea blanco */
+  cursor: pointer;
+  text-decoration: none; /* Para eliminar el subrayado en el Link */
+  transition: border-color 0.25s;
+}
+
+.btn1, .btn2, .btn3:hover {
+  border-color: #646cff;
+}
+
+.btn1, .btn2, .btn3:focus,
+.btn1, .btn2, .btn3:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Si quieres que el Link sea igual de interactivo */
+.btn1, .btn2, .btn3:active {
+  background-color: #333333; /* Cambio de color cuando se hace clic */
+}
+
+
   .btn2{
     background-color: #44F2E1;
   }

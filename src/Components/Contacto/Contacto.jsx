@@ -2,7 +2,7 @@ import React from 'react'
 import './Contacto.css'
 const Contacto = () => {
   return (
-    <div className='contacto-container'>
+    <div id='contacto' className='contacto-container'>
 
       <div className='contenedor-correo'>
         <h2>Comúnicate con nosotros</h2>
