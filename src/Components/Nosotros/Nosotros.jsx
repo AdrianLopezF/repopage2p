@@ -14,10 +14,10 @@ const Nosotros = () => {
       <img src="/image/Ellipse-mayor.png" className="ellipse-movimiento" />
       <img src="/image/Ellipse-mayor.png" className="ellipse-movimiento2" />
       <img src="/image/Ellipse-menor.png" className="ellipse-estatica" />
-      <img src="/image/Logo2.png" alt="" className="logo-img"/>
+      {/*<img src="/image/Logo2.png" alt="" className="logo-img"/>*/}
 
       <div className="nosotros-img">
-        <img src="/image/Nosotros-img.png" alt="" />
+        <img src="/image/Nosotros-img.png" alt="" className="img-nosotros" />
       </div>
       <div className="nosotros-txtbtn">
         <h2>NOSOTROS</h2>

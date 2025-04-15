@@ -1,74 +1,49 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import './Header.css'
-import logo from '../../../public/Image/Logo.png';
-=======
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import logo from "../../../public/Image/Logo.png";
->>>>>>> c2b00156a82a8937b6ca0eaba8b94c4dc7b866df
-
 
 const Header = () => {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-};
+  };
 
   return (
-    <div className="navbar">
-<<<<<<< HEAD
-  <div className="navbar-logo-container">
-    <img src={logo} alt="Logo" className="navbar-logo" />
-    <button className="hamburger" onClick={toggleMenu}>
-      ☰
-    </button>
-  </div>
-    
-
-
-  <div className={`navbar-right ${menuOpen ? "open" : ""}`}>
-    <ul>
-      <li><a href="#inicio" className="active">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <button className="contact-button">Contáctanos</button>
-  </div>
-</div>
-
-  )
-}
-export default Header
-=======
+    <div className={`navbar ${menuOpen ? "menu-open" : ""}`}>
       <a href="#hero">
         <img src={logo} alt="Logo" className="navbar-logo logo-glow" />
       </a>
 
-      <div className="navbar-right">
+      {/* Botón hamburguesa */}
+      <div className="menu-toggle" onClick={toggleMenu}>
+        <span className="bar1"></span>
+        <span className="bar2"></span>
+        <span className="bar3"></span>
+      </div>
+
+      <div className={`navbar-right ${menuOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <a href="#fortinet">Inicio</a>
+            <a href="#fortinet" onClick={toggleMenu}>Inicio</a>
           </li>
           <li>
-            <a href="#nosotros">Nosotros</a>
+            <a href="#nosotros" onClick={toggleMenu}>Nosotros</a>
           </li>
           <li>
-            <div class="dropdown">
+            <div className="dropdown">
               <a href="#servicios">Servicios</a>
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <p>Soluciones de Ciberseguridad</p>
-                <a href="">Solucion 1</a>
-                <a href="">Solucion 2</a>
-                <a href="">Solucion 3</a>
+                <a href="">Solución 1</a>
+                <a href="">Solución 2</a>
+                <a href="">Solución 3</a>
                 <p>Servicio de Monitoreo SOC</p>
                 <a href="">Servicio 1</a>
                 <a href="">Servicio 2</a>
-                <p>Asesoria y consultoria en Seguridad Informatica</p>
-                <a href="">Asesoria 1</a>
-                <a href="">Asesoria 2</a>
+                <p>Asesoría y Consultoría</p>
+                <a href="">Asesoría 1</a>
+                <a href="">Asesoría 2</a>
               </div>
             </div>
           </li>
@@ -81,6 +56,7 @@ export default Header
             if (section) {
               section.scrollIntoView({ behavior: "smooth" });
             }
+            setMenuOpen(false); // cerrar el menú al hacer clic
           }}
         >
           Contáctanos
@@ -89,5 +65,5 @@ export default Header
     </div>
   );
 };
+
 export default Header;
->>>>>>> c2b00156a82a8937b6ca0eaba8b94c4dc7b866df

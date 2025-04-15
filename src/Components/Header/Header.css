@@ -17,16 +17,12 @@ html {
   display: flex; 
   justify-content: space-between; 
   align-items: center;
-<<<<<<< HEAD
-  padding: 4px 20px 4px 4px; 
-=======
-  padding: 4px 20px; 
->>>>>>> c2b00156a82a8937b6ca0eaba8b94c4dc7b866df
+  padding: 0px 35px; 
   left: 0;
   right: 0;
-  margin: 4px 50px; 
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.8); /* Fondo negro con 50% de transparencia */
+  margin: 10px 30px; 
+  z-index: 10;
+  background: rgba(7, 7, 7, 0.563); /* Fondo negro con 50% de transparencia */
   border-radius: 15px; /* Bordes redondeados */
 }
 
@@ -37,7 +33,7 @@ html {
   gap: 5px; 
 }
 .navbar-logo {
-  height: 90px; 
+  height: 85px; 
   width: auto; 
 }
 
@@ -49,8 +45,8 @@ html {
 }
 .navbar ul {
   display: flex; 
-  gap: 70px; 
-  font-size: 17px; 
+  gap: 60px; 
+  font-size: clamp(.8rem, 1.5vw, 1rem);
   list-style-type: none; 
   padding: 0; 
   margin: 0; 
@@ -78,8 +74,6 @@ html {
   width: 100%;
 }
 
-<<<<<<< HEAD
-=======
 /* ----- Estilos para el dropdown (submenu) ----- */
 .dropdown {
   position: relative;
@@ -100,7 +94,7 @@ html {
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
   visibility: hidden; /* Lo hacemos invisible por defecto */
-  z-index: 9999;
+  z-index: 9;
 }
 
 .dropdown:hover .dropdown-content {
@@ -112,7 +106,7 @@ html {
 
 /* ----- Estilo de los elementos dentro del dropdown ----- */
 .dropdown-content p {
-  font-size: 18px;
+  font-size: clamp(.8rem, 1.5vw, 1rem);
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -122,7 +116,7 @@ html {
   padding: 8px 0;
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-size: clamp(.8rem, 1.5vw, 1rem);
   transition: background-color 0.3s ease;
 }
 
@@ -130,106 +124,127 @@ html {
   background-color: #555; /* Fondo cuando se hace hover en los enlaces */
 }
 
->>>>>>> c2b00156a82a8937b6ca0eaba8b94c4dc7b866df
 /* ----- Botón de contacto ----- */
 .contact-button {
   background: linear-gradient(to right, #44F2E1, #3AC0FE); 
   color: black; 
-  font-size: 17px;
+  font-size: clamp(.75rem, 1.5vw, 1rem);
   border: 1px solid white;
-  padding: 6px 28px;
+  padding: 6px 18px;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   outline: none;
   display: inline-block;
   text-align: center;
+  justify-content: center;
 }
 
 .contact-button:hover {
   background: linear-gradient(to right, #3AC0FE, #44F2E1);
   transform: scale(1.05);
-<<<<<<< HEAD
 }
 
 
-/* ----- Responsive ----- */
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 4px 20px;
-    margin: 0; 
-  }
+/* ----- Responsive navbar (pantallas pequeñas) ----- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
 
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: linear-gradient(to right, #3AC0FE, #44F2E1);
+  margin: 4px 10px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Cuando el menú está abierto */
+.menu-open .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu-open .bar2 {
+  opacity: 0;
+}
+.menu-open .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 950px) {
+  .navbar-logo {
+    height: 70px;
+  }
   .navbar-right {
-    gap: 30px;
+    display: flex;
+    align-items: center; 
+    gap: 45px; 
   }
 
   .navbar ul {
-    gap: 30px;
-    font-size: 15px;
+    gap: 45px; 
   }
 
+  .contact-button { 
+    padding: 6px;
+  } 
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 850px) {
   .navbar-logo {
-    height: 60px;
-  }
-
-  .contact-button {
-    padding: 4px 20px;
-    font-size: 15px;
-  }
-}
-
-/* Estilo del botón hamburguesa */
-.hamburger {
-  display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* En pantallas pequeñas, mostrar hamburguesa */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
+    height: 65px;
   }
 
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    margin: 10px;
+  }
+
+  .contact-button {
+    padding: 5px 12px;
   }
 
   .navbar-right {
-    display: none;
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    gap: 20px;
+    background: rgba(7, 7, 7, 0.95);
+    border-radius: 10px;
+    padding: 10px 20px;
     margin-top: 10px;
+    display: none;
   }
 
-  .navbar-right.open {
+  .navbar-right.active {
     display: flex;
   }
 
   .navbar ul {
     flex-direction: column;
-    gap: 15px;
-  }
-
-  .contact-button {
+    gap: 20px;
     width: 100%;
-    text-align: center;
+  }
+
+  .dropdown-content {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+    padding: 10px 0;
+  }
+
+  .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 }
 
-
-
-
-  
-  
-    
-    
-=======
-}
->>>>>>> c2b00156a82a8937b6ca0eaba8b94c4dc7b866df
