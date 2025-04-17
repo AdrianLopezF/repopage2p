@@ -32,7 +32,7 @@
 }
 
 .nosotros-txtbtn p {
-  font-size: clamp(.9rem, 1.5vw, 1rem);
+  font-size: clamp(0.85rem, 1.2vw, 1.25rem);
   margin-bottom: 30px;
   line-height: 1.4;
   text-align: center;
@@ -45,12 +45,12 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 15px;
-  background: linear-gradient(#0f2027, #203a43) padding-box, /* Fondo sólido */
-              linear-gradient(90deg, #0CFAF5, #02c7a6d8) border-box; /* Degradado del borde */
+  background: linear-gradient(#0f2027, #203a43) padding-box,
+              linear-gradient(90deg, #0CFAF5, #02c7a6d8) border-box; 
   border: 3px solid transparent;
   color: #04e1ddd8;
   transition: background 0.3s ease;
-  font-size: 18px;
+  font-size: clamp(.9rem, 1.3vw, 1rem);
   text-align: center;
 }
 
@@ -157,8 +157,7 @@
   }
 }
 
-
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .nosotros-container {
     flex-direction: column;
     height: auto;
@@ -193,6 +192,8 @@
   .contenido {
     position: relative;
     z-index: 2;
+    margin-left:3% ;
+    margin-right: 3%;
   }
 
   .nosotros-txtbtn {
@@ -200,17 +201,9 @@
   }
 
   .accordion {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     padding: 10px;
   }
-
-  .contenido {
-    font-size: clamp(0.85rem, 2.2vw, 1rem);
-  }
 }
-
-
-
 
 @media (max-width: 500px) {
   .nosotros-txtbtn {

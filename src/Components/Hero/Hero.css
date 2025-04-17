@@ -30,7 +30,7 @@
   overflow: hidden;
   flex-direction: column;
   animation: fadeInDelay 1s ease-out;
-  overflow: hidden;    /* Para que no se desborde si sale del área */
+  overflow: hidden;   
 }
 
 .hero-video {
@@ -39,7 +39,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  animation: fadeInUp .5s ease-out; /* Animation for video fade-in */
+  animation: fadeInUp .5s ease-out;
 }
 
 .hero-mundo {
@@ -92,8 +92,8 @@
 }
 
 .text-container{
-  background-color: rgba(7, 7, 7, 0.57); /* Fondo negro con transparencia */
-  border-radius: 8px;                  /* Bordes redondeados opcionales */
+  background-color: rgba(7, 7, 7, 0.57); 
+  border-radius: 8px;                  
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -201,8 +201,8 @@
 
 .fortinet-button:hover {
   transform: translateY(-10px); /* Levanta el botón 5px */
-  background-color: rgba(163, 98, 67, 0); /* Fondo transparente como mencionaste */
-  border-color: #00b8bb; /* Cambia el borde para mayor contraste */
+  background-color: rgba(163, 98, 67, 0); 
+  border-color: #00b8bb;
 }
 
 .button-fortinet {

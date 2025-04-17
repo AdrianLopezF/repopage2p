@@ -1,17 +1,27 @@
 /* --- CONTENEDOR GENERAL --- */
 .servicios-container {
-    display: flex;
-    justify-content: center;
-    height: 90vh;
-    background-color: #000912;
-    position: relative; /* ¡IMPORTANTE! Para que el ellipse se posicione dentro de este contenedor */
-    overflow: hidden;    /* Para que no se desborde si sale del área */
+  display: flex;
+  justify-content: center;
+  min-height: 60vh; 
+  width: auto;
+  background-color: #000912;
+  position: relative;
+  overflow: hidden;
   }
+
+/* Asegura que la sección no agregue espacio innecesario */
+.servicios-inicio {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}  
   
   /* --- CONTENIDO PRINCIPAL --- */
   .content-servicios {
     margin: 5%;
     width: 100%;
+    z-index: 5;
   }
   
   /* --- TÍTULO --- */
@@ -23,22 +33,26 @@
     display: block;
     margin: 0 auto;
     width: fit-content;
-  }
-  
-  .content-servicios h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -50%;
-    width: 200%;
-    height: 2px;
-    background: linear-gradient(90deg, #3AC0FE, #44F2E1, #02a685dc);
+    font-size: clamp(1rem, 1.9vw, 1.5rem);
   }
 
+  .linea-divisora {
+    width: clamp(300px, 30%, 500px);
+    height: 3px;
+    background: linear-gradient(90deg, #3AC0FE, #44F2E1, #02a685dc);
+    border: none;
+    border-radius: 5px;
+    margin: 5px auto 20px auto; /* la centra horizontalmente */
+  }
+  
+  .linea-divisora {
+    transition: width 0.3s ease;
+  }
+  
   .content-servicios p{
     color: white;
     text-align: center;
-    font-size: 18px;
+    font-size: clamp(0.85rem, 1.2vw, 1.25rem);
     z-index: 100;
   }
   
@@ -49,34 +63,36 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 50px;
+    z-index: 5;
   }
   
   /* --- ESTILO DE CADA CUADRO --- */
   .cuadro {
     background-color: #000912;
-    color: rgb(255, 255, 255);
-    width: 250px;
-    height: 250px;
+    color: #ffffff;
+    width: clamp(220px, 40vw, 250px); 
+    height: clamp(220px, 40vw, 250px); 
     padding: 15px 20px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 71, 102, 0.3);
     transition: transform 0.3s ease;
+    
   }
-  
+
   .cuadro:hover {
     transform: translateY(-5px);
   }
   
   /* --- ICONO EN EL CUADRO --- */
   .icono {
-    font-size: 40px;
+    width: clamp(40px, 8vw, 60px);
     margin-bottom: 15px;
   }
   
   /* --- TEXTO DEL CUADRO --- */
   .cuadro p {
-    font-size: 18px;
+    font-size: clamp(.9rem, 1.5vw, 1rem);
     margin: 20px 0px 30px 0px;
   }
   
@@ -100,31 +116,34 @@
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: clamp(.9rem, 1.5vw, 1rem);
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
-  color: white;  /* Para que el texto sea blanco */
+  color: rgb(0, 0, 0);  
   cursor: pointer;
-  text-decoration: none; /* Para eliminar el subrayado en el Link */
+  text-decoration: none; 
   transition: border-color 0.25s;
 }
 
-.btn1, .btn2, .btn3:hover {
-  border-color: #646cff;
+.btn1:hover, .btn2:hover, .btn3:hover {
+  border-color: #ffffff;
+  color: white;
 }
 
-.btn1, .btn2, .btn3:focus,
-.btn1, .btn2, .btn3:focus-visible {
+.btn1:focus, .btn2:focus, .btn3:focus,
+.btn1:focus-visible, .btn2:focus-visible, .btn3:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
 /* Si quieres que el Link sea igual de interactivo */
-.btn1, .btn2, .btn3:active {
-  background-color: #333333; /* Cambio de color cuando se hace clic */
+.btn1:active, .btn2:active, .btn3:active {
+  background-color: #e1e1e1;
+  color: #000912;
 }
 
-
+  .btn1{
+  background-color: #3AC0FE;
+  }
   .btn2{
     background-color: #44F2E1;
   }
@@ -152,24 +171,56 @@
     border: 3px solid transparent;
     margin-top:30px ;
   }
-  .ellipse {
-    justify-content: center;
+
+  .ellipse, .ellipse2 {
     position: absolute;
-    top: 5%;
-    right: -35%; 
-    width: auto;
-    height: 100%;
-    z-index: 0; 
-  }
-  .ellipse2 {
-    justify-content: center;
-    position: absolute;
-    top: 5%;
-    left: -35%; 
-    width: auto;
-    height: 100%;
-    z-index: 0; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 0;
   }
   
+  
+  .ellipse {
+    right: -480px; 
+  }
+  .ellipse2 {
+    left: -480px; 
+  }
+
+  @media (max-width: 1070px) {
+    .cuadros-container {
+      flex-wrap: row;
+      gap: 40px;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 1025px) {
+    .cuadros-container {
+      display: flex; 
+      flex-direction: row;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+    .cuadro1, .cuadro3{
+      margin-top: 0px;
+    }
+    .content-servicios {
+      margin-top: 8%;
+    }
+  }
+  @media (max-width: 600px) {
+    .linea-divisora {
+      width: 60%;
+    }
+  }
+
+
   
   

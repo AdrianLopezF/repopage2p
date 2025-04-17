@@ -121,7 +121,7 @@ z-index: 3;
 
 .imagen img {
   width: 100%;
-  max-width: 500px; /* opcional: para limitar el tamaño */
+  max-width: 500px; 
 }
 
 
@@ -190,23 +190,21 @@ z-index: 3;
 }
 
 .linea-divisora {
-  width: clamp(100px, 30%, 300px); /* mínimo 100px, ideal 30%, máximo 300px */
+  width: clamp(100px, 30%, 300px); 
   height: 3px;
   background: linear-gradient(50deg, #0CEAFA, #03E7BA);
   border: none;
   border-radius: 5px;
-  margin: 5px auto; /* la centra horizontalmente */
+  margin: 5px auto; 
 }
 
 .linea-divisora {
   transition: width 0.3s ease;
 }
 
-
-
 .cuadroG button {
-  width: 100%;              /* Ocupar todo el ancho disponible dentro del cuadro */
-  max-width: 200px;         /* Limita el tamaño máximo para pantallas grandes */
+  width: 100%;              
+  max-width: 200px;         
   padding: 10px 20px;
   font-size: clamp(0.8rem, 1vw, 1rem); 
   margin-top: 20px;
@@ -307,7 +305,7 @@ z-index: 3;
     margin-top: -1% ;
   }
   .cuadroG button {
-    width: 90%;             /* Más ancho en móviles */
+    width: 90%;             
     font-size: clamp(0.85rem, 3vw, 1rem);
   }
 }

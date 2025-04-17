@@ -10,6 +10,7 @@ const Servicios = () => {
         <img src="/image/Ellipse-mayor.png" alt="" className="ellipse2" />
         <div className="content-servicios">
           <h2>NUESTROS SERVICIOS</h2>
+          <hr className="linea-divisora" />
           <p>
             Entendemos el reto que implica el contar con un equipo de
             especialistas en seguridad de la información y ciberseguridad en tu

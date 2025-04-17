@@ -23,6 +23,7 @@
     padding: 2%;
     color: white;
     box-shadow: 0 8px 24px rgba(98, 101, 102, 0.244);
+    overflow: hidden;    
 }
 
 .contenedor-correo h2{
@@ -34,6 +35,9 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
 }
 
 .content-inputs{
@@ -57,7 +61,7 @@
 }
 
 textarea {
-    resize: none;                      /* Desactiva el redimensionamiento manual */
+    resize: none;                   
 }
 
 button{
@@ -66,8 +70,8 @@ button{
     background: linear-gradient(90deg, #0CFAF6, #0f9195dd);
     border-radius: 20px;
     border: none;
-    cursor: pointer;                   /* Cambia el cursor al pasar encima */
-    transition: background 0.3s ease;  /* Transición suave al hacer hover */
+    cursor: pointer;                   
+    transition: background 0.3s ease; 
     align-self: center;
 }
 button:hover {
@@ -97,26 +101,74 @@ button:hover {
 .redes img{
     width: 40px;
     height: 40px;
-    cursor: pointer;                   /* Cambia el cursor al pasar encima */
-    transition: transform 0.3s ease;   /* Efecto al pasar el cursor */
+    cursor: pointer;                  
+    transition: transform 0.3s ease;   
 }
 
 .redes img:hover {
-    transform: scale(1.1);             /* Agranda un poco el icono */
-  }
+    transform: scale(1.1);             
+}
 
-  @media (max-width: 768px) {
-    .contacto-fondo {
-      flex-direction: column;          /* Coloca todo en una sola columna */
-      align-items: center;
+  @media (max-width: 1024px) {
+    .contacto-container {
+      flex-direction: column; 
+      gap: 30px;
+      height: auto;
+      padding: 5% 4%;
     }
   
-    .input-group {
-      flex-direction: column;          /* Inputs uno debajo del otro */
+    .contenedor-correo {
+      width: 100%;
+      max-width: 500px;
+      padding: 5%;
     }
   
     .contacto-lado {
-      margin-top: 20px;                /* Espacio extra entre tarjeta y redes */
+      width: 100%;
+      max-width: 500px;
+      margin-top: 0;
+    }
+  
+    .imagen-logo {
+      width: clamp(120px, 30vw, 180px);
+    }
+  
+    .content-inputs {
+      flex-direction: column;
+    }
+  
+    .content-inputs input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box; 
+      margin: 0 auto;         
+    }    
+  
+    button {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      width: 100%;
+      max-width: 180px;
+    }
+  
+    .redes img {
+      width: clamp(30px, 8vw, 40px);
+      height: auto;
+    }
+  
+    .contenedor-correo h2,
+    .contacto-lado p {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
     }
   }
+
+  @media (max-width: 600px) {
+    .contenedor-correo,
+    .contacto-lado {
+      width: 90%;
+      max-width: 100%;
+      padding: 4%;
+    }
+  }
+  
+  
   
