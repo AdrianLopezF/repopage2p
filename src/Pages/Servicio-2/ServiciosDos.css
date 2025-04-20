@@ -1,0 +1,90 @@
+.servicios-containerDos {
+    display: flex;
+    min-height: 100vh;
+    background-color: #000912;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.contenido-servicios2{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.txt-inicioS2{
+    display: flex;
+}
+.img1-txt{
+    justify-content: left;
+    margin-top: -3%;
+}
+.img2-txt{
+    justify-content: right;
+    margin-top: -3%;
+}
+.textoS2{
+    text-align: center;
+    margin: 0 6%;
+    margin-top: 5%;
+}
+.serviciosDos{
+    display: flex;
+    justify-content: space-between;
+    margin:0% 15% 5% 15%;
+}
+.ellipse-centro{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    width: 800px; 
+    opacity: 0.5; 
+}
+.primer-tercio{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.segundo-tercio{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.contenedor {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.177); /* más transparente */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.151);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.181);
+    z-index: 2;
+  }
+  .contenedor img{
+    margin-left: 30px;
+    margin-right: 15px;
+    height: 50%;
+  }
+  .descripcion{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+.descripcion h3 {
+    margin: 0;
+    margin-bottom: 5px; /* o el espacio que vos quieras */
+}
+
+.descripcion p{
+    margin: 0;
+    font-size: 16px;
+}
+ 
+  
+  

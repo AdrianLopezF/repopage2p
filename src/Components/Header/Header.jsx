@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Header.css";
-import logo from "../../../public/Image/Logo.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +11,7 @@ const Header = () => {
   return (
     <div className={`navbar ${menuOpen ? "menu-open" : ""}`}>
       <a href="#hero">
-        <img src={logo} alt="Logo" className="navbar-logo logo-glow" />
+        <img src="/public/image/Logo.png" alt="Logo" className="navbar-logo logo-glow" />
       </a>
 
       {/* Botón hamburguesa */}

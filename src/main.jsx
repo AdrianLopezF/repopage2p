@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
-import Servicio1 from "./Pages/servicio1.jsx"; // ← crea estos archivos luego
-import Servicio2 from "./Pages/servicio2.jsx";
-import Servicio3 from "./Pages/servicio3.jsx";
+import Servicio1 from "./Pages/Servicio-1/ServicioCiberseguridad.jsx"; // ← crea estos archivos luego
+import Servicio2 from "./Pages/Servicio-2/ServicioSoc.jsx";
+import Servicio3 from "./Pages/Servicio-3/ServicioAsesoria.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

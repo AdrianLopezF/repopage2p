@@ -41,6 +41,7 @@ const Servicios = () => {
               <Link to="/servicio3" className="btn3">Ver más</Link>
             </div>
           </div>
+          <hr className="linea-divisora" />
         </div>
       </div>
     </section>

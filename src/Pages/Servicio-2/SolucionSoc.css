@@ -1,0 +1,115 @@
+.solucion-container {
+    min-height: 100vh;
+    background-color: #000912;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.contenido-solucion {
+    position: relative;
+    padding: 0 1rem;
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+    margin: 5% 10% 5% 10%;
+  }
+  
+  /* Esquina superior izquierda */
+  .contenido-solucion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%; /* largo de la línea horizontal */
+    height: 50%; /* alto para línea vertical */
+    border-top: 4px solid #00f7ff;
+    border-left: 4px solid #00f7ff;
+    border-top-left-radius: 20px;
+  }
+  
+  /* Esquina superior derecha */
+  .contenido-solucion::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 50%;
+    border-top: 4px solid #00f7ff;
+    border-right: 4px solid #00f7ff;
+    border-top-right-radius: 20px;
+  }
+  
+  /* Esquina inferior izquierda */
+  .contenido-solucion .esquina-inferior-izq {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 50%;
+    border-bottom: 4px solid #02A686;
+    border-left: 4px solid #02A686;
+    border-bottom-left-radius: 20px;
+  }
+  
+  /* Esquina inferior derecha */
+  .contenido-solucion .esquina-inferior-der {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 50%;
+    border-bottom: 4px solid #02A686;
+    border-right: 4px solid #02A686;
+    border-bottom-right-radius: 20px;
+  }
+  
+.imagenes-arriba {
+    display: flex;
+    justify-content: space-between; /* separa los elementos a los extremos */
+    align-items: center; /* centra verticalmente si es necesario */
+    width: 100%;
+}
+.imagenes-arriba p {
+    max-width: 75%;
+    height: auto;
+}
+.tit-soluciones{
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
+    margin: 0;
+}
+.txt-img-soluciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 4%;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .soluciones-txt {
+    flex: 1;
+    max-width: 55%;
+  }
+  .soluciones-txt p{
+    font-size: clamp(0.85rem, 1.2vw, 1.2rem);
+  }
+  
+  .img-solucion {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+  }
+  
+  .icono-solucion {
+    width: 24px;
+    height: auto;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  

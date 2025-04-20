@@ -36,8 +36,8 @@
     font-size: clamp(1rem, 1.9vw, 1.5rem);
   }
 
-  .linea-divisora {
-    width: clamp(300px, 30%, 500px);
+  .linea-divisora{
+    width: clamp(400px, 50%, 800px);
     height: 3px;
     background: linear-gradient(90deg, #3AC0FE, #44F2E1, #02a685dc);
     border: none;
@@ -45,7 +45,7 @@
     margin: 5px auto 20px auto; /* la centra horizontalmente */
   }
   
-  .linea-divisora {
+  .linea-divisora{
     transition: width 0.3s ease;
   }
   
@@ -62,8 +62,9 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 50px;
+    top: 50px;
     z-index: 5;
+    margin-bottom: 3%;
   }
   
   /* --- ESTILO DE CADA CUADRO --- */
@@ -217,7 +218,10 @@
   }
   @media (max-width: 600px) {
     .linea-divisora {
-      width: 60%;
+      width: 80%;
+    }
+    .cuadros-container {
+      margin-bottom: 6%;
     }
   }
 
