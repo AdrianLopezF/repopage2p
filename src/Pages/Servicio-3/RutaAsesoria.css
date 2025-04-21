@@ -1,0 +1,111 @@
+.servicios-containerTres {
+    min-height: auto;
+    display: block;
+    background-color: #000912;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contenido-servicios3 {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+  }
+  
+  /* Texto arriba*/
+  .textoS3 {
+    text-align: center;
+    margin: 2% 6%;
+  }
+
+  .texto-arriba{
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+    /* Texto arriba*/
+
+  
+  .frase-asesoria {
+    display: flex;
+    background-image: linear-gradient(to right, #07eafa93, #00c8bb7a);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+  }
+  
+  .frase-asesoria p {
+    color: white;
+    margin: 2px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: bold;
+  }
+  
+  .diagrama-asesoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .diagrama-asesoria img {
+    width: clamp(300px, 70vw, 900px);
+    margin: 4%;
+  }
+  
+  .descripciones-asesoria {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0% 4%;
+    flex-wrap: wrap;
+  }
+  
+  .descripciones-asesoria p {
+    position: relative;
+    flex: 1;
+    padding-left: 1rem;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+  
+  .descripciones-asesoria p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to bottom, #009ba7, #009a90);
+    border-radius: 2px;
+  }
+  
+  .titulo-s3 {
+    background: linear-gradient(90deg, #07eafae3, #00c8aaec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .descripciones-asesoria {
+      flex-direction: column;
+      align-items: center;
+      gap: .8rem;
+    }
+  
+    .descripciones-asesoria p {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .descripciones-asesoria p::before {
+      width: 5px;
+      height: 100%;
+    }
+  }
+  
+  
+  

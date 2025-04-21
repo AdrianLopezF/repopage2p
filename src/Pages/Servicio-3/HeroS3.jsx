@@ -7,11 +7,11 @@ const HeroS3 = () => {
          <img src="./image/FondoHeroS3.png" alt="" className="hero3-imagen"/>
          <div className="overlay"></div>
          <div className='hero3-content'>
+            <div className="img-asesoria">
+              <img src="./image/img-hero3.png" alt="" />
+            </div>
             <div className='tit-asesoria'>
             <h1>ASESORIA Y CONSULTORIA EN SEGURIDAD INFORMATICA</h1>
-            </div>
-            <div>
-            <img src="" alt="" />
             </div>
          </div>
     </div>
