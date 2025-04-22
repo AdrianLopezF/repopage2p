@@ -3,20 +3,43 @@
   min-height: 100vh;
   background-color: #000912;
   color: white;
-  padding: 4%;
   position: relative;
   overflow: hidden;
 }
-.contenido-servicios{
-padding: 0 5%;
+
+.txt-inicioS1 {
+  display: flex;
 }
 
 .texto {
-font-size: clamp(1rem, 1.1vw, 1.5rem);
-letter-spacing: 1px;
-text-align: center;
+  text-align: center;
+  margin: 0 6%;
+  margin-top: 5%;
+  font-size: clamp(.85rem, 1.1vw, 1.5rem);
+  letter-spacing: 1px;
 }
+.img1-s1{
+  justify-content: left;
 
+}
+.img1-s2{
+  justify-content: right;
+}
+.img-decoracion {
+  max-width: 8%;
+  object-fit: contain;
+}
+.img-decoracionAbajo {
+  max-width: 12%;
+  object-fit: contain;
+}
+.img-abajo-s1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 3%; 
+}
 .azul {
 color: #0CFAF5; 
 }
@@ -26,7 +49,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 box-sizing: border-box;
-margin-top: 3%;
+margin: 0 10%;
 }
 
 /*PAR UNO Y TRES */
@@ -125,9 +148,7 @@ height: 20px;
 background: linear-gradient(to bottom, #0F4346, #0CEAFA);
 }
 
-/**/
 
-/* Esquina inferior izquierda */
 .box2::before {
 content: "";
 position: absolute;
@@ -148,7 +169,7 @@ height: 20px;
 background: linear-gradient(to bottom, #0F4346, #0CEAFA);
 }
 
-/* Esquina inferior derecha */
+
 .box2 .corner-bottom-right::before {
 content: "";
 position: absolute;
@@ -169,28 +190,112 @@ height: 20px;
 background: linear-gradient(to bottom, #0F4346, #0CEAFA);
 }
 
-
+@media (max-width: 1350px) {
+  .ciberseguridad-servicios {
+    gap: 1rem;
+    margin: 0 3%;
+  }
+}
 @media(max-width:1280px){
 .contenido-servicios{
   padding: 0;
 }
 }
-@media(max-width:1140px){
-.ciberseguridad-servicios{
-  display: flex;
-  flex-direction: column;
+
+@media (max-width: 1140px) {
+  .ciberseguridad-servicios {
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0 2%;
+  }
+  .par-uno,
+  .par-dos,
+  .par-tres,
+  .par-cuatro {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 5%;
+  }
 }
-.par-uno, .par-tres{
-  display: flex;
-  flex-direction: row;
-  margin-top:10%;
-}
-.par-dos, .par-cuatro{
-  display: flex;
-  flex-direction: row;
-  margin-top:10%;
+@media (max-width: 768px) {
+  .box, .box2 {
+    width: 200px;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .box p, .box2 p {
+    margin-top: 1rem;
+  }
+
+  .circle img {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+  }
+
+  .img-decoracion {
+    max-width: 10%;
+  }
+  .img-decoracionAbajo {
+    max-width: 15%;
+  }
+
+  .texto {
+    margin: 4% 0;
+  }
+
 }
 
+@media (max-width: 450px) {
+  .ciberseguridad-servicios {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 2%;
+  }
+
+  .par-uno,
+  .par-dos,
+  .par-tres,
+  .par-cuatro {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 5%;
+  }
+
+  .box, .box2 {
+    width: 100px; 
+    height: 110px;
+    padding: .5rem 0.5rem;
+  }
+
+  .box p, .box2 p {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .circle img {
+    width: 60px;
+    height: 60px;
+    top: -25px;
+  }
+
+  .texto {
+    letter-spacing: 0px;
+    margin: 12% 4% ;
+  }
+
+  .img-decoracion {
+    display: none;
+  }
+  .img-decoracionAbajo {
+    max-width: 18%;
+  }
 }
 
 

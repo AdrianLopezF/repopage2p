@@ -14,9 +14,9 @@
 .img-izquierda,
 .img-derecha {
   height: 100%;
-  max-width: 25%;
+  max-width: 18%;
   object-fit: contain;
-  z-index: 2;
+  z-index:2;
 }
 
 .centro {
@@ -33,7 +33,7 @@
 }
 
 .centro p {
-  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 

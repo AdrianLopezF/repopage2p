@@ -5,9 +5,16 @@ const Servicios = () => {
   return (
     <section className='servicios-containerUno'>
         <div className='contenido-servicios'>
-          <p className='texto'>
-            Contamos con <span className="azul">soluciones integrales de ciberseguridad</span> enfocadas en la mitigación de los riesgos cibernéticos que puedan presentarse en <span className="azul">su organización</span>. Estos servicios apoyan en la identificación, <span className="azul">protección, prevención y recuperación </span>de sus activos digitales.
-          </p>
+          
+
+          <div className='txt-inicioS1'>
+            <img src="/image/TriangulosUno.png" alt="" className='img1-s1 img-decoracion'/>
+              <p className='texto'>
+                Contamos con <span className="azul">soluciones integrales de ciberseguridad</span> enfocadas en la mitigación de los riesgos cibernéticos que puedan presentarse en <span className="azul">su organización</span>. Estos servicios apoyan en la identificación, <span className="azul">protección, prevención y recuperación </span>de sus activos digitales.
+              </p>
+            <img src="/image/TriangulosDos.png" alt="" className='img2-s1 img-decoracion' />
+          </div>
+
           <div className='ciberseguridad-servicios'>
             <div className='par-uno'>
               <div className='box'> 
@@ -60,6 +67,10 @@ const Servicios = () => {
                 <p>Threat Hunting.</p>
               </div>
             </div>
+          </div>
+          <div className='img-abajo-s1'>
+            <img src="/image/TriangulosTres.png" alt="" className='img1-s1 img-decoracionAbajo'/>
+            <img src="/image/TriangulosCuatro.png" alt="" className='img2-s1 img-decoracionAbajo' />
           </div>
         </div>
     </section>

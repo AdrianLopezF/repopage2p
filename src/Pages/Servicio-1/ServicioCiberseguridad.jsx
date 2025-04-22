@@ -1,7 +1,7 @@
 import React from 'react'
 import './ServicioCiberseguridad.css'
 import Header from '../../Components/Header/Header'
-import HeroUno from './Hero'
+import HeroUno from './HeroUno'
 import ServicioUno from './ServiciosUno'
 import Beneficios from './Beneficios'
 import Contacto from '../../Components/Contacto/Contacto'

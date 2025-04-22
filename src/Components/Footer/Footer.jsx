@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
         <img src="./image/Footer-img2.png" alt="" className='img-derecha' />
         <img src="./image/Ellipse-mayor.png" className="ellipse-movimiento3" />
-        
+        <div className="overlay"></div>
     </div>
   )
 }

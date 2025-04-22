@@ -1,5 +1,4 @@
 .beneficios-container{
-    min-height: 90vh;
     background-color: #000912;
     color: white;
     position: relative;
@@ -14,7 +13,7 @@
 }
 
 .content-beneficios h2 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     text-align: center;
     z-index: 3;
   }
@@ -29,9 +28,11 @@
 }
 
 .icn{
+  width: 28px;
     margin-right: 2%;
     vertical-align: middle; 
 }
+
 
 .txt-beneficios{
     margin-left: 5%;
@@ -39,7 +40,7 @@
 }
 
 .txt-beneficios p{
-    font-size: clamp(0.85rem, 1.2vw, 1.25rem);
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
 }
 
 .img-beneficios {
@@ -101,5 +102,57 @@
     100% {
       transform: translateX(5%) translateY(100px); /* Vuelta a A */
     }
+  }
+
+  /*Responsividad*/
+
+  @media(max-width:1100px){
+    .img-beneficios {
+      height: 300px;
+      margin: 0% 3%;
+    }
+    
+    .img-beneficios img {
+      height: 100%;
+      width: auto;
+    }
+    .icn {
+      width: 20px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .text-img-beneficios {
+      flex-direction: column;
+      text-align: center;
+      margin: 0 2%;
+    }
+  
+    .img-beneficios {
+      height: 300px;
+      margin: 0 auto 2rem auto;
+    }
+  
+    .txt-beneficios {
+      margin-left: 0;
+    }
+  
+    .txt-beneficios p {
+      margin-bottom: 1rem;
+    }
+  
+    .icn {
+      width: 20px;
+      margin-right: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .img-beneficios {
+      height: 220px;
+    }
+  
+
   }
   
