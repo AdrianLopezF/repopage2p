@@ -10,8 +10,8 @@ const Hero = () => {
 
       <div className="hero-content">
         <div className="tit-soc">
-          <h1 className="h1-soc">MONITOREO DE</h1>
-          <h1 className ="h2-soc">SOC</h1>
+          <h1>MONITOREO DE</h1>
+          <h1>SOC</h1>
         </div>
         <div className="img-1">
           <img src="./image/ImgHeroS2.png" alt="" className='imgService2' />

@@ -6,12 +6,15 @@ const ServiciosDos = () => {
     <section className='servicios-containerDos'>
         <div className='contenido-servicios2'>
             <div className='txt-inicioS2'>
-                <img src="./image/textoS2-izquierda.png" alt="" className='img1-txt'/>
-                <p className='textoS2'>
-                Detecta y responde a tiempo ante amenazas e incidentes de ciberseguridad integrando tu infraestructura tecnológica a los servicios administrados de un SOC, tu seguridad es nuestra prioridad.
+                <img src="./image/textoS2-izquierda.png" alt="" className='img1-txt img-decoraciones'/>
+                <p className='textoS2 texto-arriba uno'>
+                  Detecta y responde a tiempo ante amenazas e incidentes de ciberseguridad integrando tu infraestructura tecnológica a los servicios administrados de un SOC, tu seguridad es nuestra prioridad.
                 </p>
-                <img src="./image/textoS2-derecha.png" alt="" className='img2-txt' />
+                <img src="./image/textoS2-derecha.png" alt="" className='img2-txt img-decoraciones' />
             </div>
+            <p className='textoS2 texto-arriba dos'>
+                  Detecta y responde a tiempo ante amenazas e incidentes de ciberseguridad integrando tu infraestructura tecnológica a los servicios administrados de un SOC, tu seguridad es nuestra prioridad.
+            </p>
             <div className='serviciosDos'>
               <img src="./image/Ellipse-mayor.png" alt="" className='ellipse-centro'/>
               

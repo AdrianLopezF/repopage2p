@@ -1,61 +1,107 @@
 .hero2-container {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    overflow: hidden;  
-  }
-  
-  .hero2-imagen {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+}
 
-  .overlay {
-    position: absolute;
-    inset: 0; /* top: 0; right: 0; bottom: 0; left: 0; */
-    background-color: #00081062; /* oscurece el video */
-    z-index: 0;
-  }
 
+.hero2-imagen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #00081062;
+  z-index: 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  z-index: 1;
+}
+
+.tit-soc {
+  flex: 1;
+  justify-content: center;
+}
+
+.tit-soc h1 {
+  display: flex;
+  justify-content: right;
+  font-size: clamp(1.2rem, 2.7vw, 2.7rem);
+  color: white;
+}
+
+.img-1 {
+  display: flex;
+  flex: 1;
+  justify-content: left;
+  align-items: center;
+}
+
+.imgService2 {
+  width: clamp(150px, 30vw, 380px);
+}
+@media (max-width: 992px){
+  .hero2-container {
+    min-height: 40vh; 
+  }
   .hero-content {
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 100%;
     z-index: 1;
   }
-
-  .tit-soc{
-    flex: 1;
-    justify-content: center;
+}
+@media (max-width: 780px){
+  .hero2-container {
+    min-height: 55vh; 
   }
-  
-  .h1-soc {
-    display: flex;
-    justify-content: right;
-    font-size: clamp(1.7rem, 2.8vw, 2.8rem);
-    color: white;
-  }
+}
 
-  .h2-soc{
-    display: flex;
-    justify-content: right;
-    font-size: clamp(1.5rem, 2.8vw, 2.8rem);
-    color: white;
-  }
-
-  .img-1{
-    display: flex;
-    flex: 1;
-    justify-content: left;
+@media (max-width: 768px) {
+  .hero3-container {
+    min-height: 40vh;
+    height: auto;
     align-items: center;
   }
 
-  .imgService2{
-    width: 65%;
+  .hero-content {
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
   }
+
+  .tit-soc h1 {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .img-1 {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .imgService2 {
+    width: clamp(180px, 50vw, 300px);
+  }
+}
+@media (max-width: 340px){
+  .hero2-container {
+    min-height: 70vh;
+  }
+}

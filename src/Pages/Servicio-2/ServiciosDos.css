@@ -1,90 +1,210 @@
 .servicios-containerDos {
     display: flex;
-    min-height: 100vh;
+    flex-direction: column;
     background-color: #000912;
     color: white;
     position: relative;
     overflow: hidden;
+    flex-grow: 1; 
 }
-.contenido-servicios2{
+
+.contenido-servicios2 {
     display: flex;
     flex-direction: column;
     gap: 5%;
+    flex-grow: 1;
 }
 
-.txt-inicioS2{
+.txt-inicioS2 {
     display: flex;
 }
-.img1-txt{
+
+.img1-txt {
     justify-content: left;
     margin-top: -3%;
 }
-.img2-txt{
+
+.img2-txt {
     justify-content: right;
     margin-top: -3%;
 }
-.textoS2{
+
+.img-decoraciones {
+    height: 100%;
+    max-width: 25%;
+    object-fit: contain;
+}
+
+.textoS2 {
     text-align: center;
     margin: 0 6%;
     margin-top: 5%;
 }
-.serviciosDos{
+
+.texto-arriba {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
+.serviciosDos {
     display: flex;
     justify-content: space-between;
-    margin:0% 15% 5% 15%;
+    margin: 0 clamp(.5rem, 8vw, 15%) 5% clamp(.5rem, 8vw, 15%);
+    flex-wrap: wrap; 
 }
-.ellipse-centro{
+
+.ellipse-centro {
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    width: 800px; 
-    opacity: 0.5; 
+    width: 800px;
+    opacity: 0.5;
 }
-.primer-tercio{
+
+.primer-tercio,
+.segundo-tercio {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
-.segundo-tercio{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
+
 .contenedor {
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 150px;
-    background: rgba(255, 255, 255, 0.177); /* más transparente */
+    background: rgba(255, 255, 255, 0.177);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.151);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.181);
     z-index: 2;
-  }
-  .contenedor img{
+    margin-bottom: 20px; 
+}
+
+.contenedor img {
     margin-left: 30px;
     margin-right: 15px;
-    height: 50%;
-  }
-  .descripcion{
+    height: clamp(40px, 10vh, 80px);
+}
+
+.descripcion {
     display: flex;
     flex-direction: column;
     margin: 15px;
-  }
+}
 
 .descripcion h3 {
     margin: 0;
-    margin-bottom: 5px; /* o el espacio que vos quieras */
+    margin-bottom: 5px;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
 
-.descripcion p{
+.descripcion p {
     margin: 0;
-    font-size: 16px;
+    font-size: clamp(0.85rem, 2vw, 1rem);
 }
+
+.dos{
+    display: none;
+}
+
+
+@media (max-width: 1210px) {
+    .contenedor {
+        width: 100%;
+        max-width: 450px;
+        height: 140px;
+    }
+
+    .contenedor img {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1090px) {
+    .serviciosDos {
+        margin: 0 6% 4% 6%;
+        gap: 10px;
+    }
+
+    .contenedor {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .serviciosDos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 2% 5%;
+        gap: 30px;
+    }
+    .contenedor {
+        width: 100%;
+        max-width: 450px;
+    }
+    .textoS2 {
+        text-align: center;
+        margin: 0 0%;
+        margin-top: 5%;
+    }
+}
+@media (max-width: 750px) {
+    .dos {
+        display: block;
+        margin-top: 0px 5px;
+    }
+    .uno {
+        display: none;
+    }
+
+    .txt-inicioS2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .img1-txt {
+        display: flex;
+        justify-content: flex-start; 
+        width: 45%; 
+        margin-top: -3rem;
+    }
+
+    .img2-txt {
+        display: flex;
+        justify-content: flex-end; 
+        width: 45%; 
+        margin-top: -3rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .serviciosDos {
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 5%;
+        gap: 30px;
+    }
+    .contenedor {
+        width: 100%;
+        max-width: 300px;
+        margin: 5px;
+    }
+}
+
+  
+  
  
   
   
