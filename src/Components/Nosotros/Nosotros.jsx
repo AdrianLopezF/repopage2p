@@ -25,7 +25,7 @@ const Nosotros = () => {
           Somos una empresa especializada en brindar servicios y soluciones de Seguridad Informática y Tecnologías de la Información y Comunicación. Nuestra misión es respaldar la operación de nuestros clientes a través de profesionales y herramientas tecnológicas que hagan más simple y segura su operación.
         </p>
 
-        <div className="accordion" onClick={() => toggle(0)}>
+        <div className="accordion btn-1" onClick={() => toggle(0)}>
           <span className='btn-txt'>Nuestra misión</span>
           <div className={`contenido ${activo === 0 ? 'mostrar' : ''}`}>
             Respaldar la operación de nuestros clientes con soluciones seguras y eficientes. Respaldar la operación de nuestros clientes con soluciones seguras y eficientes.Respaldar la operación de nuestros clientes con soluciones seguras y eficientes.
@@ -34,7 +34,7 @@ const Nosotros = () => {
           </div>
         </div>
 
-        <div className="accordion" onClick={() => toggle(1)}>
+        <div className="accordion btn-2" onClick={() => toggle(1)}>
           <span className='btn-txt'>Nuestra visión</span>
           <div className={`contenido ${activo === 1 ? 'mostrar' : ''}`}>
             Ser líderes en soluciones de seguridad informática en Latinoamérica.Ser líderes en soluciones de seguridad informática en Latinoamérica.Ser líderes en soluciones de seguridad informática en Latinoamérica.Ser líderes en soluciones de seguridad informática en Latinoamérica.
@@ -43,7 +43,7 @@ const Nosotros = () => {
           </div>
         </div>
 
-        <div className="accordion" onClick={() => toggle(2)}>
+        <div className="accordion btn-3" onClick={() => toggle(2)}>
           <span className='btn-txt'>Nuestros valores</span>
           <div className={`contenido ${activo === 2 ? 'mostrar' : ''}`}>
             Compromiso, innovación, integridad y trabajo en equipo.
@@ -56,6 +56,7 @@ const Nosotros = () => {
             Compromiso, innovación, integridad y trabajo en equipo.
           </div>
         </div>
+        <img src="/public/image/Logo2.png" alt="Logo" className="logo-2p" />
       </div>
     </div>
   );

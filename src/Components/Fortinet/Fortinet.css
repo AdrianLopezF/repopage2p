@@ -1,7 +1,7 @@
 .fortinet-container {
   display: flex;
-  background-color: #000912;
-  color: white;
+  background-color: #010a0f;
+  color: rgb(223, 223, 223);
   position: relative; /* ¡IMPORTANTE! Para que el ellipse se posicione dentro de este contenedor */
   overflow: hidden;    /* Para que no se desborde si sale del área */
   padding: 8% 5% 2% 5%;
@@ -213,6 +213,54 @@ z-index: 3;
   transition: background 0.3s ease;
 }
 
+/* Animación de deslizamiento desde la izquierda */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); /* Empieza fuera de la pantalla por la izquierda */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Aplica la animación solo cuando la clase "animate-slide" es añadida */
+.animate-slide {
+  animation: slideInLeft 1s ease-out forwards; /* 1s para mayor fluidez */
+}
+
+/* Animación de deslizamiento desde la derecha */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); /* Empieza fuera de la pantalla por la derecha */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Aplica la animación solo cuando se añade la clase 'animate-slide-right' */
+.animate-slide-right {
+  animation: slideInRight 1s ease-out forwards; /* 1s para mayor fluidez */
+}
+
+.fortinet-titulo,
+.ejemplos,
+.contactanos,
+.resultado {
+  opacity: 0; /* Inicialmente ocultos */
+  transform: translateX(0);
+  transition: opacity 2s ease-out, transform 2s ease-out; /* Añadir una transición suave */
+}
+
+/* Clase animada para cuando se activa la animación */
+.animated {
+  animation: none; /* Para evitar que se vuelva a aplicar la animación */
+}
+
 
 /*ELLIPSE*/
 
@@ -220,7 +268,7 @@ z-index: 3;
   position: absolute;
   left: 85%; 
   transform: translateX(-50%);
-  animation: moveDiagonal2 10s ease-in-out infinite; 
+  animation: moveDiagonal2 7.5s ease-in-out infinite; 
   width: auto;
   height: 60%; 
   opacity: .8;
@@ -239,13 +287,12 @@ z-index: 3;
   }
 }
 
-
 .ellipse-mov2 {
   position: absolute;
   top: 20%; 
   left: 30%; 
   transform: translateX(-50%); 
-  animation: moveDiagonal 10s ease-in-out infinite; 
+  animation: moveDiagonal 7.5s ease-in-out infinite; 
   width: auto;
   height: 60%; 
   opacity: .8;
@@ -264,7 +311,6 @@ z-index: 3;
     transform: translateX(-50%) translateY(-150px); /* Vuelta a A */
   }
 }
-
 
 /*RESPONSIVE*/
 
@@ -315,14 +361,3 @@ z-index: 3;
     width: 60%;
   }
 }
-
-
-
-
-
-
-
-
-
-  
-  

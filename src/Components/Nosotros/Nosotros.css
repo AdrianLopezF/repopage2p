@@ -1,8 +1,8 @@
 .nosotros-container {
   display: flex;
   height: 100vh;
-  background-color: #000912;
-  color: white;
+  background-color: #010a0f;
+  color: rgb(223, 223, 223);
   position: relative; /* ¡IMPORTANTE! Para que el ellipse se posicione dentro de este contenedor */
   overflow: hidden;    /* Para que no se desborde si sale del área */
 }
@@ -33,7 +33,7 @@
 
 .nosotros-txtbtn p {
   font-size: clamp(0.85rem, 1.2vw, 1.25rem);
-  margin-bottom: 30px;
+  margin-bottom: 90px;
   line-height: 1.4;
   text-align: center;
 }
@@ -45,28 +45,66 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 15px;
-  background: linear-gradient(#0f2027, #203a43) padding-box,
-              linear-gradient(90deg, #0CFAF5, #02c7a6d8) border-box; 
+  background: linear-gradient(#0c191f, #1a2a30) padding-box,
+              linear-gradient(90deg, #04bab8, #028A75) border-box; 
   border: 3px solid transparent;
   color: #04e1ddd8;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease-in-out;
   font-size: clamp(.9rem, 1.3vw, 1rem);
   text-align: center;
 }
 
 
+/* Efecto de hover: el borde gira alrededor del botón */
 .accordion:hover {
-  background-color: rgba(0, 240, 255, 0.1);
+  animation: rotate-border 3s linear infinite; /* Rotación infinita en hover */
+}
+
+/* Animación para el giro del borde */
+@keyframes rotate-border {
+  0% {
+    border-color: white; /* Color del borde inicial */
+  }
+  25% {
+    border-color: #04bab8; /* Cambio de color del borde */
+  }
+  50% {
+    border-color: white; /* Vuelve al color inicial */
+  }
+  75% {
+    border-color: #04bab8; /* Cambio de color del borde */
+  }
+  100% {
+    border-color: white; /* Vuelve al color inicial */
+  }
 }
 
 .accordion span::after {
   content: '▼';
   float: right;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .accordion .mostrar + span::after {
   transform: rotate(180deg);
+}
+
+.btn-1 {
+  width: 40%;
+  margin-left: auto;
+}
+
+.btn-2 {
+  width: 40%;
+  left: 22%;
+}
+
+.btn-3 {
+  width: 40%;
+}
+
+.btn-1, .btn-2, .btn-3 {
+  margin-bottom: 4%;
 }
 
 .contenido {
@@ -77,6 +115,14 @@
   font-weight: normal;
   margin-top: 10px;
   font-size: 15px;
+}
+
+.logo-2p {
+  position: absolute;
+  width: 12%;
+  top: 72%;
+  left: 85%;
+  opacity: 0.7;
 }
 
 .mostrar {
@@ -112,7 +158,7 @@
   top: 20%; 
   left: 50%; 
   transform: translateX(-50%); 
-  animation: moveDiagonal 10s ease-in-out infinite; 
+  animation: moveDiagonal 8s ease-in-out infinite; 
   width: auto;
   height: 90%; 
   opacity: .8;
@@ -136,7 +182,7 @@
   position: absolute;
   left: 85%; 
   transform: translateX(-50%);
-  animation: moveDiagonal2 10s ease-in-out infinite; 
+  animation: moveDiagonal2 8s ease-in-out infinite; 
   width: auto;
   height: 60%; 
   opacity: .8;
@@ -203,6 +249,15 @@
   .accordion {
     padding: 10px;
   }
+
+  .btn-1, .btn-2, .btn-3 {
+    width: 50%; /* Ajustamos el tamaño de los botones a un 50% */
+    left: 20%;
+  }
+
+  .logo-2p {
+    width: 20%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -216,6 +271,13 @@
 
   .nosotros-txtbtn p {
     margin-bottom: 20px;
+  }
+  .btn-1, .btn-2, .btn-3 {
+    width: 90%; /* Los botones ocupan el 90% del contenedor */
+    margin-bottom: 10px; /* Añadimos más espacio entre los botones */
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
   }
 }
 
