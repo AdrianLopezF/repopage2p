@@ -1,7 +1,24 @@
-import React from 'react'
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import './HeroS2.css'
 
 const Hero = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Verifica si hay un hash en la URL
+    if (location.hash) {
+      // Selecciona el elemento con ese id
+      const element = document.querySelector(location.hash);
+      if (element) {
+        // Realiza un desplazamiento suave hacia ese elemento
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  
   return (
     <div id="hero2" className="hero2-container">
       <img src="./image/FondoHeroS2.png" alt="" className="hero2-imagen"/>

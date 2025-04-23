@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className={`navbar ${menuOpen ? "menu-open" : ""}`}>
-      <a href="#hero">
+      <a href="/#hero">
         <img src="/public/image/Logo.png" alt="Logo" className="navbar-logo logo-glow" />
       </a>
 
@@ -24,14 +24,14 @@ const Header = () => {
       <div className={`navbar-right ${menuOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <a href="#fortinet" onClick={toggleMenu}>Inicio</a>
+            <a href="/#fortinet" onClick={toggleMenu}>Inicio</a>
           </li>
           <li>
-            <a href="#nosotros" onClick={toggleMenu}>Nosotros</a>
+            <a href="/#nosotros" onClick={toggleMenu}>Nosotros</a>
           </li>
           <li>
             <div className="dropdown">
-              <a href="#servicios">Servicios</a>
+              <a href="/#servicios">Servicios</a>
               <div className="dropdown-content">
                 <p>Soluciones de Ciberseguridad</p>
                 <a href="">Solución 1</a>

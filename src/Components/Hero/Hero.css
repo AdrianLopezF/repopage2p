@@ -124,15 +124,15 @@
   width: 100%;
   height: 100%;
   color: transparent;
-  background: linear-gradient(to right, #0026ff, #00FFFF); /* Brillo más llamativo */
+  background: linear-gradient(to right, #FF00FF, #00FFFF); /* Brillo más llamativo */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   /* Máscara en movimiento */
   -webkit-mask-image: linear-gradient(
     120deg,
-    transparent 90%,
-    rgba(255, 255, 255, 1) 50%,
+    transparent 30%,
+    rgba(255, 255, 255, 1) 100%,
     transparent 70%
   );
   -webkit-mask-size: 200% 100%;
@@ -166,6 +166,7 @@
   max-width: 850px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
+  color: #eaeaea;
 }
 
 /* Animación para el botón */
