@@ -76,6 +76,42 @@
     display: none;
 }
 
+/* Aquí aplicamos las clases de animación */
+.animate-text {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.animate-image {
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+
+/* Animación para el texto */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animación para la imagen */
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  
+
 @media (max-width: 768px) {
     .img-text-S3 {
       flex-direction: column;

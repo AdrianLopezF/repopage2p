@@ -62,12 +62,69 @@
     opacity: 0.5;
 }
 
-.primer-tercio,
-.segundo-tercio {
+/* Primer tercio: */
+.primer-tercio {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
+  }
+  
+  /* Elementos 1 y 3 dentro del primer-tercio se moverán en la misma dirección */
+  .primer-tercio .contenedor:nth-child(1),
+  .primer-tercio .contenedor:nth-child(3) {
+    animation: moveLeftRight 2s ease-in-out infinite;
+  }
+  
+  /* Elemento 2 (del medio) dentro del primer-tercio se moverá en la dirección contraria */
+  .primer-tercio .contenedor:nth-child(2) {
+    animation: moveRightLeft 2s ease-in-out infinite;
+  }
+  
+  /* Segundo tercio: */
+  .segundo-tercio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Elementos 1 y 3 dentro del segundo-tercio se moverán de derecha a izquierda */
+  .segundo-tercio .contenedor:nth-child(1),
+  .segundo-tercio .contenedor:nth-child(3) {
+    animation: moveRightLeft 2s ease-in-out infinite;
+  }
+  
+  /* Elemento 2 (del medio) dentro del segundo-tercio se moverá en la dirección contraria */
+  .segundo-tercio .contenedor:nth-child(2) {
+    animation: moveLeftRight 2s ease-in-out infinite;
+  }
+  
+  /* Animación de movimiento de izquierda a derecha */
+  @keyframes moveLeftRight {
+    0% {
+      transform: translateX(-5px);  /* Inicia ligeramente a la izquierda */
+    }
+    50% {
+      transform: translateX(5px);   /* Se mueve ligeramente a la derecha */
+    }
+    100% {
+      transform: translateX(-5px);  /* Vuelve ligeramente a la izquierda */
+    }
+  }
+  
+  /* Animación de movimiento de derecha a izquierda */
+  @keyframes moveRightLeft {
+    0% {
+      transform: translateX(5px);   /* Inicia ligeramente a la derecha */
+    }
+    50% {
+      transform: translateX(-5px);  /* Se mueve ligeramente a la izquierda */
+    }
+    100% {
+      transform: translateX(5px);   /* Vuelve ligeramente a la derecha */
+    }
+  }
+  
+  
 
 .contenedor {
     display: flex;

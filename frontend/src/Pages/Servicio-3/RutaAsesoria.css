@@ -48,12 +48,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .diagrama-asesoria img {
+}
+
+/* Animación que mueve la imagen de arriba a abajo, luego en sentido contrario */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(-20px); /* Empieza arriba */
+    }
+    50% {
+        transform: translateY(20px); /* En el medio se mueve hacia abajo */
+    }
+    100% {
+        transform: translateY(-20px); /* Termina arriba */
+    }
+}
+
+/* Aplica la animación a la imagen */
+.diagrama-asesoria img {
     width: clamp(300px, 70vw, 900px);
     margin: 4%;
-  }
+    animation: moveUpDown 3s ease-in-out infinite; /* 3 segundos para la animación */
+}
+
   
   .descripciones-asesoria {
     display: flex;

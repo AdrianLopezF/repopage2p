@@ -1,105 +1,108 @@
 .solucion-container {
-    min-height: 30vh;
-    background-color: #000912;
-    color: white;
-    position: relative;
-    overflow: hidden;
+  min-height: 30vh;
+  background-color: #000912;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .contenido-solucion {
-    position: relative;
-    padding: 0 1rem;
-    border-radius: 10px;
-    color: white;
-    overflow: hidden;
-    margin: 5% 10% 5% 10%;
+  position: relative;
+  padding: 0 1rem;
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+  margin: 5% 10% 5% 10%;
 }
 
 /* Esquina superior izquierda */
 .contenido-solucion::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 50%;
-    border-top: 4px solid #00f7ff;
-    border-left: 4px solid #00f7ff;
-    border-top-left-radius: 20px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 50%;
+  border-top: 4px solid #00f7ff;
+  border-left: 4px solid #00f7ff;
+  border-top-left-radius: 20px;
 }
 
 /* Esquina superior derecha */
 .contenido-solucion::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 25%;
-    height: 50%;
-    border-top: 4px solid #00f7ff;
-    border-right: 4px solid #00f7ff;
-    border-top-right-radius: 20px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 50%;
+  border-top: 4px solid #00f7ff;
+  border-right: 4px solid #00f7ff;
+  border-top-right-radius: 20px;
 }
 
 /* Esquina inferior izquierda */
 .contenido-solucion .esquina-inferior-izq {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40%;
-    height: 50%;
-    border-bottom: 4px solid #02A686;
-    border-left: 4px solid #02A686;
-    border-bottom-left-radius: 20px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 50%;
+  border-bottom: 4px solid #02a686;
+  border-left: 4px solid #02a686;
+  border-bottom-left-radius: 20px;
 }
 
 /* Esquina inferior derecha */
 .contenido-solucion .esquina-inferior-der {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 40%;
-    height: 50%;
-    border-bottom: 4px solid #02A686;
-    border-right: 4px solid #02A686;
-    border-bottom-right-radius: 20px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 50%;
+  border-bottom: 4px solid #02a686;
+  border-right: 4px solid #02a686;
+  border-bottom-right-radius: 20px;
 }
 
 .imagenes-arriba {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .imagenes-arriba img {
-    width: 45%;
+  width: 45%;
 }
 
 .tit-soluciones {
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
-    text-align: center;
-    margin: 0;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  text-align: center;
+  margin: 0;
 }
 
 .txt-img-soluciones {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 4%;
-    flex-wrap: wrap;
-    gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 4%;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .soluciones-txt {
-    flex: 1;
-    max-width: 55%;
+  flex: 1;
+  max-width: 55%;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .soluciones-txt p {
-    font-size: clamp(0.85rem, 2vw, 1.1rem);
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
 }
 
 .img-solucion {
@@ -107,45 +110,80 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-.img-solucion img{
+.img-solucion img {
   max-width: clamp(50%, 60vw, 80%);
 }
 
-
 .icono-solucion {
-    width: 24px;
-    height: auto;
-    margin-right: 20px;
-    vertical-align: middle;
+  width: 24px;
+  height: auto;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+/* Soluciones texto e imagen con animación activada */
+.soluciones-txt.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Soluciones imagen con animación activada */
+.img-solucion.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animación para el texto */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animación para la imagen */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 950px) {
+  .imagenes-arriba img {
+    width: 40%;
+    margin-bottom: 20px;
+  }
 
-    .imagenes-arriba img {
-        width: 40%; 
-        margin-bottom: 20px;
-    }
+  .txt-img-soluciones {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .txt-img-soluciones {
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    .soluciones-txt {
-        max-width: 100%;
-        text-align: center; 
-    }
-    .txt-img-soluciones {
-      gap: .5rem;
+  .soluciones-txt {
+    max-width: 100%;
+    text-align: center;
+  }
+  .txt-img-soluciones {
+    gap: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
-    .imagenes-arriba img {
-        width: 40%;
-    }
+  .imagenes-arriba img {
+    width: 40%;
+  }
 }
-
-  

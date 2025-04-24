@@ -7,6 +7,45 @@
   overflow: hidden;
 }
 
+
+/* Animación para el movimiento suave de arriba a abajo */
+@keyframes movimiento-vertical {
+  0% {
+    transform: translateY(0); /* Comienza en su posición original */
+  }
+  25% {
+    transform: translateY(-5px); /* Subir un poquito */
+  }
+  50% {
+    transform: translateY(5px); /* Baja un poquito */
+  }
+  75% {
+    transform: translateY(-5px); /* Subir otra vez */
+  }
+  100% {
+    transform: translateY(0); /* Regresa a su posición original */
+  }
+}
+
+/* Aplicar la animación a los elementos que deseas mover */
+.ciberseguridad-servicios, .img-abajo-s1, .box, .box2 {
+  animation: movimiento-vertical 3s ease-in-out infinite; /* Movimiento suave y continuo */
+  will-change: transform; /* Indica al navegador que estamos animando transform */
+  transform: translateZ(0); /* Fuerza el uso de la GPU para la animación */
+}
+
+/* Opcional: un pequeño retraso para crear un efecto de secuencia */
+.par-uno .box, .par-tres .box {
+  animation-delay: 0.4s; /* Inicia con un pequeño retraso */
+}
+
+.par-dos .box2, .par-cuatro .box2 {
+  animation-delay: 0.5s; /* Inicia con un pequeño retraso */
+}
+
+
+
+
 .txt-inicioS1 {
   display: flex;
 }

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -33,16 +35,9 @@ const Header = () => {
             <div className="dropdown">
               <a href="/#servicios">Servicios</a>
               <div className="dropdown-content">
-                <p>Soluciones de Ciberseguridad</p>
-                <a href="">Solución 1</a>
-                <a href="">Solución 2</a>
-                <a href="">Solución 3</a>
-                <p>Servicio de Monitoreo SOC</p>
-                <a href="">Servicio 1</a>
-                <a href="">Servicio 2</a>
-                <p>Asesoría y Consultoría</p>
-                <a href="">Asesoría 1</a>
-                <a href="">Asesoría 2</a>
+                <a href="">Soluciones de Ciberseguridad</a>
+                <a href="">Servicio de Monitoreo SOC</a>
+                <a href="">Asesoría y Consultoría</a>
               </div>
             </div>
           </li>

@@ -119,7 +119,18 @@ const Fortinet = () => {
             <img src="./image/Fortinet.png" alt="" />
           </div>
           <hr className="linea-divisora" />
-          <button type="submit">Contactanos aquí</button>
+          <button
+            type="submit"
+            onClick={() => {
+              const section = document.getElementById("contacto");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+              setMenuOpen(false); // cerrar el menú al hacer clic
+            }}
+          >
+            Contactanos aquí
+          </button>
         </div>
       </div>
     </div>
