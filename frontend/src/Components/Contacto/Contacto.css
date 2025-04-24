@@ -1,0 +1,244 @@
+.contacto-container{
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./image/Fondo-correo.png'); /*Fondo*/
+    background-size: cover;       /* La imagen cubre todo el fondo */
+    background-position: center;  /* Centrar la imagen */
+    padding: 2%;  
+    position: relative; /* ¡IMPORTANTE! Para que el ellipse se posicione dentro de este contenedor */
+    overflow: hidden;    /* Para que no se desborde si sale del área */
+    gap: 200px;
+}
+
+/*LADO IZQUIERDO*/
+.contenedor-correo{
+    backdrop-filter: blur(5px); /*Difuminar el fondo que hay detrás*/
+    background-color: rgba(132, 186, 192, 0.247);
+    border-radius: 20px;
+    width:  550px;
+    max-width: 90vw;  
+    padding: 2%;
+    color: white;
+    box-shadow: 0 8px 24px rgba(98, 101, 102, 0.244);
+    overflow: hidden;    
+}
+
+.contenedor-correo h2{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+
+.content-inputs{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.content-inputs input, textarea{
+  flex: 1;                           
+  padding: 12px;                     
+  border: 2px solid white;                      
+  border-radius: 30px;               
+  background: rgba(255, 255, 255, 0.629); 
+  color: rgb(0, 0, 0);                            
+  font-size: 15px; 
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo para cuando el input o textarea está en foco */
+.content-inputs input:focus,
+textarea:focus {
+  border-color: #0CFAF6; /* Color del borde al hacer focus */
+  background: rgba(12, 250, 246, 0.5); /* Fondo con color suave */
+  box-shadow: 0 0 8px rgba(12, 250, 246, 0.5); /* Sombra alrededor del campo */
+  outline: none; /* Quitar el borde azul predeterminado del navegador */
+}
+
+textarea {
+    resize: none;                   
+}
+
+.botonEnv {
+  font-size: 16px;
+  width: 150px;
+  height: 50px; /* Añadido un tamaño fijo de altura */
+  background: linear-gradient(90deg, #0f9195dd, #0CFAF6);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  overflow: hidden; /* Para asegurarnos de que la cortina no se desborde */
+  align-self: center;
+  transition: color 0.3s ease, transform 0.3s ease; /* Suavizamos el cambio de color de la letra */
+}
+
+.botonEnv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 204, 0.5); /* Cortina de color verde neón con transparencia */
+  transform: translateX(-100%); /* Empieza fuera del botón */
+  transition: transform 0.5s ease-in-out; /* Suavizamos la animación */
+  z-index: 1; /* Colocamos la cortina debajo del texto */
+}
+
+.botonEnv:hover::after {
+  transform: translateX(0); /* La cortina se desliza hacia adentro */
+}
+
+.botonEnv:hover {
+  color: black; /* Cambio de color del texto al hacer hover */
+  transform: scale(1.05); /* Efecto de zoom para mayor interacción */
+  box-shadow: 0 0 10px 4px rgba(0, 255, 204, 0.8); /* Sombra brillante alrededor del borde */
+  border: 2px solid rgba(0, 255, 204, 0.8); /* Borde brillante verde neón */
+  background: linear-gradient(90deg, #00ffcc, #009999); /* Mantener el gradiente */
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8); /* Sombra de texto para un toque futurista */
+}
+
+/* Aseguramos que el texto (span) quede encima de la cortina */
+.botonEnv span {
+  position: relative; /* Posicionamos el span encima de la cortina */
+  z-index: 2; /* Colocamos el span por encima de la cortina */
+}
+
+
+/*LADO DERECHO*/
+.contacto-lado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    max-width: 500px;
+    text-align: center;
+    gap: 8px;  
+}
+
+.imagen-logo{
+    width: 200px;
+}
+
+.redes{
+    display: flex;
+    gap: 15px;              
+}
+
+.redes img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;                  
+    transition: transform 0.3s ease;   
+}
+
+.redes img:hover {
+    transform: scale(1.1);             
+}
+
+  @media (max-width: 1024px) {
+    .contacto-container {
+      flex-direction: column; 
+      gap: 30px;
+      height: auto;
+      padding: 5% 4%;
+    }
+  
+    .contenedor-correo {
+      width: 100%;
+      max-width: 500px;
+      padding: 5%;
+    }
+  
+    .contacto-lado {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 0;
+    }
+  
+    .imagen-logo {
+      width: clamp(120px, 30vw, 180px);
+    }
+  
+    .content-inputs {
+      flex-direction: column;
+    }
+  
+    .content-inputs input,
+    textarea {
+      width: 100%;
+      box-sizing: border-box; 
+      margin: 0 auto;         
+    }    
+  
+    button {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      width: 100%;
+      max-width: 180px;
+    }
+  
+    .redes img {
+      width: clamp(30px, 8vw, 40px);
+      height: auto;
+    }
+  
+    .contenedor-correo h2,
+    .contacto-lado p {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+    }
+  }
+
+  .mensaje-enviado {
+    display: flex;
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;      /* Centra el contenido verticalmente */
+  }
+  
+
+  @media (max-width: 600px) {
+    .contenedor-correo,
+    .contacto-lado {
+      width: 90%;
+      max-width: 100%;
+      padding: 4%;
+    }
+  }
+  
+  .pantalla-carga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  

@@ -1,0 +1,110 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 14vh; 
+  max-height: 25vh;
+  height: 100%;
+  background-color: #000912;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-izquierda,
+.img-derecha {
+  height: 100%;
+  max-width: 18%;
+  object-fit: contain;
+  z-index:2;
+}
+
+.centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1; 
+  z-index: 3;
+}
+
+.Nombre-empresa {
+  height: 30px;
+}
+
+.centro p {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+
+.ellipse-movimiento3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 0;
+  animation: moveZigzag 9s linear infinite;
+  pointer-events: none; 
+}
+
+.ellipse-movimiento4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 0;
+  animation: moveZigzag 5s linear infinite;
+  pointer-events: none; 
+}
+
+.ellipse-movimiento5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 0;
+  animation: moveZigzag 7s linear infinite;
+  pointer-events: none; 
+}
+
+
+@keyframes moveZigzag {
+  0% {
+    transform: translateX(0vw) translateY(-10vh);
+  }
+  15% {
+    transform: translateX(12vw) translateY(18vh);
+  }
+  30% {
+    transform: translateX(25vw) translateY(-10vh);
+  }
+  45% {
+    transform: translateX(45vw) translateY(18vh);
+  }
+  60% {
+    transform: translateX(60vw) translateY(-10vh);
+  }
+  75% {
+    transform: translateX(75vw) translateY(18vh);
+  }
+  90% {
+    transform: translateX(90vw) translateY(-10vh);
+  }
+  100% {
+    transform: translateX(100vw) translateY(18vh);
+  }
+}
+
+@media(max-width: 500px){
+  .Nombre-empresa { 
+    height: 20px;
+  }
+}
+
+
