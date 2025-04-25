@@ -51,7 +51,31 @@
     width: 100%;
     box-sizing: border-box;
     place-items: center;
+}
+
+/* Animación de rebote en bucle */
+@keyframes bounceEffect {
+  0% {
+    transform: scale(1); /* Tamaño original */
+    opacity: 0.8; /* Opacidad levemente reducida */
   }
+  25% {
+    transform: scale(1.01); /* Aumenta el tamaño levemente */
+    opacity: 1; /* Opacidad al 100% */
+  }
+  50% {
+    transform: scale(1); /* Vuelve al tamaño original */
+    opacity: 0.8; /* Opacidad levemente reducida */
+  }
+  75% {
+    transform: scale(1.01); /* Aumenta el tamaño levemente */
+    opacity: 1; /* Opacidad al 100% */
+  }
+  100% {
+    transform: scale(1); /* Tamaño original */
+    opacity: 0.8; /* Opacidad levemente reducida */
+  }
+}
   
   
   .box-s4 {
@@ -72,6 +96,32 @@
     transition: transform 0.3s ease;
     z-index: 1;
     overflow: hidden;
+    animation: bounceEffect 2s infinite forwards; /* Aplicamos la animación */
+  }
+  
+  /* Retraso progresivo para cada box-s4 */
+  .box-s4:nth-child(1) {
+    animation-delay: 0s; /* Primer elemento comienza inmediatamente */
+  }
+  
+  .box-s4:nth-child(2) {
+    animation-delay: 0.3s; /* Segundo elemento comienza después de 0.3s */
+  }
+  
+  .box-s4:nth-child(3) {
+    animation-delay: 0.6s; /* Tercer elemento después de 0.6s */
+  }
+  
+  .box-s4:nth-child(4) {
+    animation-delay: 0.9s; /* Cuarto elemento después de 0.9s */
+  }
+  
+  .box-s4:nth-child(5) {
+    animation-delay: 1.2s; /* Quinto elemento después de 1.2s */
+  }
+  
+  .box-s4:nth-child(6) {
+    animation-delay: 1.5s; /* Sexto elemento después de 1.5s */
   }
   
   .box-s4::before {

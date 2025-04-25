@@ -40,7 +40,8 @@ const Contacto = () => {
 
     const phoneRegex = /^[0-9]{10}$/;
     if (formData.telefono && !phoneRegex.test(formData.telefono)) {
-      newErrors.telefono = "El teléfono debe contener solo 10 dígitos numéricos.";
+      newErrors.telefono =
+        "El teléfono debe contener solo 10 dígitos numéricos.";
     }
 
     if (!formData.mensaje) newErrors.mensaje = "El mensaje es obligatorio.";
@@ -57,9 +58,9 @@ const Contacto = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
@@ -73,7 +74,9 @@ const Contacto = () => {
           setIsSent(false);
         }, 10000); // 10000 ms = 10 segundos
       } else {
-        alert("Hubo un problema al enviar el mensaje, por favor intenta nuevamente.");
+        alert(
+          "Hubo un problema al enviar el mensaje, por favor intenta nuevamente."
+        );
       }
 
       setFormData({
@@ -131,7 +134,9 @@ const Contacto = () => {
                 value={formData.telefono}
                 onChange={handleChange}
               />
-              {errors.telefono && <span className="error">{errors.telefono}</span>}
+              {errors.telefono && (
+                <span className="error">{errors.telefono}</span>
+              )}
 
               <input
                 type="text"
@@ -157,16 +162,24 @@ const Contacto = () => {
           </form>
         )}
 
-        {isSent && <p className="mensaje-enviado">¡Mensaje enviado con éxito!</p>}
+        {isSent && (
+          <p className="mensaje-enviado">¡Mensaje enviado con éxito!</p>
+        )}
       </div>
 
       <div className="contacto-lado">
         <img src="./image/Logo2.png" alt="Logo" className="imagen-logo" />
         <p>Síguenos en nuestras redes sociales:</p>
         <div className="redes">
-          <img src="./image/Facebook.png" alt="Facebook" />
-          <img src="./image/Tiktok.png" alt="TikTok" />
+          {/* <img src="./image/Facebook.png" alt="Facebook" /> */}
+          <a href="https://www.tiktok.com/@2protection?_t=ZS-8voieuxKwKu&_r=1" target="_blank">
+            <img src="./image/Tiktok.png" alt="TikTok" />
+          </a>
+
+          <a href="https://www.instagram.com/2protection_networks?igsh=YzZ3bzI2cmY1b3Zm" target="_blank">
           <img src="./image/Instagram.png" alt="Instagram" />
+          </a>
+
         </div>
       </div>
     </div>

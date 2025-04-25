@@ -1,121 +1,137 @@
 .beneficio-containerCuatro {
-    min-height: auto;
-    display: block;
-    background-color: #000912;
-    color: white;
-    position: relative;
-    overflow: hidden;
+  min-height: auto;
+  display: block;
+  background-color: #000912;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-.ellipse-s4{
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0; 
-    opacity: 0.5; 
-    pointer-events: none;
-    width: 800px; 
-    height: auto;
+.ellipse-s4 {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none;
+  width: 800px;
+  height: auto;
 }
-.contenido-beneficio4{
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
-    gap: 5%;
-    justify-content: center;
-    align-items: center;
+.contenido-beneficio4 {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenido-beneficio4 h2 {
-    text-align: center;
+  text-align: center;
 }
 
-.img-text-S4{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 1% 8% 4% 8% ;
+.img-text-S4 {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 8% 4% 8%;
 }
 
 .img-beneficio4 {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -100%; /* Inicialmente fuera de la pantalla */
+  opacity: 0;
+  transition: left 1s, opacity 1s;
+}
+
+.img-beneficio4.in-view {
+  left: 0;
+  opacity: 1;
 }
 
 .img-beneficio4 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.txt-beneficio4{
-    flex: 1;
-    text-align: left;
+.txt-beneficio4 {
+  flex: 1;
+  text-align: left;
+  right: -100%; /* Inicialmente fuera de la pantalla, a la derecha */
+  opacity: 0;
+  transition: right 1s, opacity 1s; /* Animación de deslizamiento */
+}
+
+.txt-beneficio4.in-view {
+  right: 0; /* Cuando entre en vista, se mueve a su posición */
+  opacity: 1;
 }
 
 .txt-beneficio4 p {
-    font-size: clamp(0.9rem, 1.9vw, 1rem);
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  font-size: clamp(0.9rem, 1.9vw, 1rem);
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .icono-beneficio-s4 {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
-.fraseS4 h3{
-    font-size: clamp(1rem, 1.9vw, 1.2rem);
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(90deg, #b1f8fd, #00aba3); /* De rojo a naranja */
+.fraseS4 h3 {
+  font-size: clamp(1rem, 1.9vw, 1.2rem);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(90deg, #b1f8fd, #00aba3); /* De rojo a naranja */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; 
+  background-clip: text;
   color: transparent;
-} 
+}
 
 @media (max-width: 768px) {
-    .img-text-S4 {
-      flex-direction: column;
-      margin: 1rem;
-      gap: 1.5rem;
-    }
-    
-    .img-beneficio4  {
-      order: -1; 
-      width: 100%;
-    }
-  
-    .img-beneficio4 img {
-      width: 100%;
-      max-width: 100%;
-      border: none;
-      border-radius: 0;
-    }
-  
-    .txt-beneficio4 {
-      text-align: center;
-      padding: 0 1rem;
-    }
-  
-    .txt-beneficio4 p {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.4rem;
-    }
-  
-    .icono-beneficio {
-      width: 20px;
-      height: 20px;
-    }
+  .img-text-S4 {
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1.5rem;
   }
+
+  .img-beneficio4 {
+    order: -1;
+    width: 100%;
+  }
+
+  .img-beneficio4 img {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+
+  .txt-beneficio4 {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .txt-beneficio4 p {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+  }
+
+  .icono-beneficio {
+    width: 20px;
+    height: 20px;
+  }
+}
