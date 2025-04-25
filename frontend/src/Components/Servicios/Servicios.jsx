@@ -43,6 +43,7 @@ const Servicios = () => {
               <p>Soluciones de ciberseguridad.</p>
               <Link to="/servicio1#hero1" className="btn1">Ver más</Link>
             </div>
+
             <div className="cuadro2 cuadro">
               <div className="icono2">
                 <img src="/image/Servicios-icono2.png" alt="" />
@@ -50,6 +51,7 @@ const Servicios = () => {
               <p>Servicio de monitoreo SOC.</p>
               <Link to="/servicio2#hero2" className="btn2">Ver más</Link>
             </div>
+
             <div className="cuadro3 cuadro">
               <div className="icono3">
                 <img src="/image/Servicios-icono3.png" alt="" />
@@ -57,6 +59,15 @@ const Servicios = () => {
               <p>Asesoría y consultoría en seguridad Informática.</p>
               <Link to="/servicio3#hero3" className="btn3">Ver más</Link>
             </div>
+
+            <div className="cuadro4 cuadro">
+              <div className="icono4">
+                <img src="/image/Servicios-icono4.png" alt="" />
+              </div>
+              <p>Servicio de NOC</p>
+              <Link to="/servicio4#hero4" className="btn4">Ver más</Link>
+            </div>
+
           </div>
           <hr className="linea-divisora" />
         </div>

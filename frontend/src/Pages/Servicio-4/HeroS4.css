@@ -1,0 +1,99 @@
+.hero4-container {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-color: #000912;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+}
+
+.hero4-imagen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero4-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90vh;
+  padding: 0 10%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.txt-HeroS4 {
+  flex: 1;
+  color: white;
+  text-align: right;
+}
+
+.img-HeroS4 {
+  display: flex;
+  flex: 1;
+}
+.img-HeroS4 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Títulos */
+.txt-HeroS4 h1 {
+  font-size: clamp(1.2rem, 2.7vw, 2.7rem);
+}
+
+.txt-HeroS4 h2 {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+@media (max-width: 950px) {
+  .hero4-container {
+    min-height: 40vh;
+    height: auto;
+    align-items: center;
+  }
+
+  .hero4-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 2rem .5rem;
+    text-align: center;
+  }
+
+  .txt-HeroS4 {
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .img-HeroS4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-HeroS4 img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-right: 10%;
+  }
+}
+
+
+
+@media (max-width: 770px) {
+  .hero4-container  {
+    min-height: 50vh;
+    height: auto;
+    align-items: center;
+  }
+}

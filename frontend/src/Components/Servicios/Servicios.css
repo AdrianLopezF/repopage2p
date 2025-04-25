@@ -39,7 +39,7 @@
   .linea-divisora{
     width: clamp(400px, 50%, 800px);
     height: 3px;
-    background: linear-gradient(90deg, #3AC0FE, #44F2E1, #02a685dc);
+    background: linear-gradient(90deg, #58deff, #2ff0e3, #44F2E1, #02a685dc);
     border: none;
     border-radius: 5px;
     margin: 5px auto 20px auto; /* la centra horizontalmente */
@@ -113,7 +113,7 @@
   }
 
 /* Estilo común para button y Link */
-.btn1, .btn2, .btn3 {
+.btn1, .btn2, .btn3, .btn4 {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -126,49 +126,58 @@
   transition: border-color 0.25s;
 }
 
-.btn1:hover, .btn2:hover, .btn3:hover {
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover {
   border-color: #ffffff;
   color: white;
 }
 
-.btn1:focus, .btn2:focus, .btn3:focus,
-.btn1:focus-visible, .btn2:focus-visible, .btn3:focus-visible {
+.btn1:focus, .btn2:focus, .btn3:focus, .btn4:focus,
+.btn1:focus-visible, .btn2:focus-visible, .btn3:focus-visible, .btn4:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
 /* Si quieres que el Link sea igual de interactivo */
-.btn1:active, .btn2:active, .btn3:active {
+.btn1:active, .btn2:active, .btn3:active, .btn4:active {
   background-color: #e1e1e1;
   color: #000912;
 }
 
   .btn1{
-  background-color: #3AC0FE;
+  background-color: #4ecfef;
   }
   .btn2{
-    background-color: #44F2E1;
+    background-color: #1ce8e8;
   }
   .btn3{
-    background-color: #029A7B;
+    background-color: #00D6B2;
+  }
+  .btn4{
+    background-color: #02BBAF;
   }
 
   .cuadro1{
     background: 
     linear-gradient(#0f2027, #203a43) padding-box, 
-    linear-gradient(90deg, #3AC0FE, #44F2E1) border-box;
+    linear-gradient(90deg, #009bac, #58deff) border-box;
     border: 3px solid transparent;
-    margin-top:30px ;
   }
   .cuadro2{
     background: 
     linear-gradient(#0f2027, #203a43) padding-box, 
-    linear-gradient(90deg, #44F2E1, #029A7B) border-box;
+    linear-gradient(90deg, #58deff, #1ce8e8) border-box;
     border: 3px solid transparent;
+    margin-top:30px ;
   }
   .cuadro3{
     background: 
     linear-gradient(#0f2027, #203a43) padding-box, 
-    linear-gradient(90deg, #029A7B, #036766) border-box;
+    linear-gradient(90deg, #1ce8e8, #00D6B2) border-box;
+    border: 3px solid transparent;
+  }
+  .cuadro4{
+    background: 
+    linear-gradient(#0f2027, #203a43) padding-box, 
+    linear-gradient(90deg, #00D6B2, #02BBAF) border-box;
     border: 3px solid transparent;
     margin-top:30px ;
   }
